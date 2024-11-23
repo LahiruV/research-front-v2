@@ -71,27 +71,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isAuthenticated }) => {
                     }
                 </List >
             </nav >
-
-            {/* <nav className='log-out-button'>
-                {isAuthenticated ? (
-                    <li onClick={() => { logOut(); handleSelect('logout'); }} className={`flex justify-content-center align-items-center border-radius-5 padding-10 ${selected} === 'logout' ? 'selected' : ''`}>
-                        <Link to="">
-                            <LogoutIcon />
-                            Logout
-                        </Link>
-                    </li>
-                ) : (
-                    <li
-                        className={selected === 'login' ? 'selected' : ''}
-                        onClick={() => handleSelect('login')}
-                    >
-                        <Link to="/login">
-                            <LoginIcon />
-                            Login
-                        </Link>
-                    </li>
-                )}
-            </nav> */}
         </div >
     );
 };

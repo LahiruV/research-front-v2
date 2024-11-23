@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Typography, Box } from '@mui/material';
 import { BasicButton, InputField, NotificationWidget } from '@zenra/widgets';
-import { page_main_color, power_by } from '@zenra/configs';
+import { power_by } from '@zenra/configs';
 import { PoweredBy } from '@zenra/components';
 
 export interface LoginComponentProps {
@@ -54,7 +54,7 @@ const LoginComponent: React.FC<LoginComponentProps> = ({
                             variant='outlined'
                             size='md'
                             isFullWidth
-                            helperTextColor={page_main_color}
+                            helperTextColor={'#429d42'}
                         />
                     </div>
                     <div className='margin-top-10'>
@@ -72,7 +72,7 @@ const LoginComponent: React.FC<LoginComponentProps> = ({
                             variant='outlined'
                             size='md'
                             isFullWidth
-                            helperTextColor={page_main_color}
+                            helperTextColor={'#429d42'}
                         />
                     </div>
                     {error && (
@@ -82,11 +82,12 @@ const LoginComponent: React.FC<LoginComponentProps> = ({
                     )}
                     <BasicButton
                         id='login'
-                        className='margin-top-20 dark-button-main'
+                        className='margin-top-20'
                         label='LOGIN'
                         variant='solid'
-                        size='md'
+                        size='sm'
                         type="submit"
+                        colors='success'
                         isFullWidth
                         isLoading={isLoading}
                     />

@@ -19,6 +19,7 @@ export interface InputFieldProps {
     classNameHelperText?: string
     value: string | number
     helperTextColor?: string
+    colors?: 'primary' | 'neutral' | 'danger' | 'success' | 'warning'
     setState: (value: string | number) => void
 }
 
@@ -36,6 +37,7 @@ const InputField: React.FC<InputFieldProps> = ({
     value,
     helperTextColor,
     classNameHelperText,
+    colors,
     setState,
 }) => {
     return (
@@ -51,6 +53,7 @@ const InputField: React.FC<InputFieldProps> = ({
                 size={size}
                 fullWidth={isFullWidth}
                 value={value}
+                color={colors}
                 onChange={(e) => setState(e.target.value)}
             />
             <FormHelperText className={classNameHelperText || ''} sx={{ color: helperTextColor }}>{helperText}</FormHelperText>

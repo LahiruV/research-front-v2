@@ -11,6 +11,7 @@ export interface InputFileUploadProps {
     file: File | null
     loading: boolean
     isFileUploaded?: boolean
+    colors?: 'primary' | 'neutral' | 'danger' | 'success' | 'warning'
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
@@ -33,6 +34,7 @@ const InputFileUpload: React.FC<InputFileUploadProps> = ({
     afterLabel,
     loading,
     isFileUploaded,
+    colors,
     onChange
 }) => {
 
@@ -44,7 +46,7 @@ const InputFileUpload: React.FC<InputFileUploadProps> = ({
             role={undefined}
             tabIndex={-1}
             variant="outlined"
-            color="neutral"
+            color={colors}
             loading={loading}
             startDecorator={
                 !loading &&

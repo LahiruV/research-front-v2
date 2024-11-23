@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Typography, Box } from '@mui/material';
 import { BasicButton, InputField, InputFileUpload, NotificationWidget } from '@zenra/widgets';
-import { page_main_color, power_by } from '@zenra/configs';
+import { power_by } from '@zenra/configs';
 import { PoweredBy } from '@zenra/components';
 import { useInitialService } from '@zenra/services';
 
@@ -80,7 +80,7 @@ const RegisterComponent: React.FC<RegisterComponentProps> = ({
                             variant='outlined'
                             size='md'
                             isFullWidth
-                            helperTextColor={page_main_color}
+                            helperTextColor={'#429d42'}
                         />
                     </div>
                     <div className='margin-top-10'>
@@ -98,7 +98,7 @@ const RegisterComponent: React.FC<RegisterComponentProps> = ({
                             variant='outlined'
                             size='md'
                             isFullWidth
-                            helperTextColor={page_main_color}
+                            helperTextColor={'#429d42'}
                         />
                     </div>
                     <div className='margin-top-10'>
@@ -116,18 +116,19 @@ const RegisterComponent: React.FC<RegisterComponentProps> = ({
                             variant='outlined'
                             size='md'
                             isFullWidth
-                            helperTextColor={page_main_color}
+                            helperTextColor={'#429d42'}
                         />
                     </div>
 
                     <InputFileUpload
                         id='profile-image'
-                        className='margin-top-10 purple-main font-11'
+                        className='margin-top-10 font-11'
                         label="Upload Profile Image"
                         afterLabel="Uploaded"
                         file={file}
                         loading={isFileUploaded}
                         isFileUploaded={isFileConverted}
+                        colors={'success'}
                         onChange={handleFileChange}
                     />
 
@@ -138,18 +139,19 @@ const RegisterComponent: React.FC<RegisterComponentProps> = ({
                     )}
                     <BasicButton
                         id='register'
-                        className='margin-top-20 dark-button-main'
+                        className='margin-top-20'
                         label='REGISTER'
                         variant='solid'
-                        size='md'
+                        size='sm'
                         type="submit"
                         isLoading={isLoading}
+                        colors='success'
                         isFullWidth
                     />
                 </form>
-                <div className='font-14 underline italic cursor padding-top-5 align-items-end' onClick={login}>
+                <Typography className='font-14 underline italic cursor padding-top-5 align-items-end' onClick={login}>
                     Login
-                </div>
+                </Typography>
                 <PoweredBy company_name={power_by} />
                 <NotificationWidget
                     id='register-notification'

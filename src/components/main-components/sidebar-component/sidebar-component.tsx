@@ -4,7 +4,7 @@ import './sidebar-component.css';
 import { company_name } from '@zenra/configs';
 import HomeIcon from '@mui/icons-material/Home';
 import InfoIcon from '@mui/icons-material/Info';
-import DashboardIcon from '@mui/icons-material/Dashboard';
+
 import { useSelector } from 'react-redux';
 import { RootState, setRouteTitle } from '@zenra/store';
 import List from '@mui/material/List';
@@ -23,12 +23,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isAuthenticated }) => {
 
     const navItems = [
         { key: 'home', label: 'Home', path: '/home', icon: <HomeIcon /> },
-        { key: 'about', label: 'About', path: '/about', icon: <InfoIcon /> },
-        { key: 'newhome', label: 'New Home', path: '/new-home', icon: <InfoIcon /> },
         ...(isAuthenticated ? [
-            {
-                key: 'dashboard', label: 'Dashboard', path: '/dashboard', icon: <DashboardIcon />
-            }
+            { key: 'amount-predict', label: 'Amount Predict', path: '/amount-predict', icon: <InfoIcon /> },
+            { key: 'price-predict', label: 'Price Predict', path: '/price-predict', icon: <InfoIcon /> },
+            { key: 'bug-predict', label: 'Bug Predict', path: '/bug-predict', icon: <InfoIcon /> },
+            { key: 'fungus-predict', label: 'Fungus Predict', path: '/fungus-predict', icon: <InfoIcon /> },
         ] : [])
     ];
 

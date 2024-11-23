@@ -10,7 +10,6 @@ export interface AmountComponentProps {
 const AmountComponent: React.FC<AmountComponentProps> = () => {
 
     const [date, setDate] = React.useState<string | number>('');
-    const [rainfall, setRainfall] = React.useState<string | number>('');
 
     return (
         <div className='flex align-items-center justify-content-start font-12'>
@@ -32,17 +31,6 @@ const AmountComponent: React.FC<AmountComponentProps> = () => {
                             size='sm'
                             value={date}
                             setState={setDate} />
-                        <InputField
-                            className='width-240 font-14'
-                            id='rainfall'
-                            label='Rainfall'
-                            placeholder='Enter Rainfall'
-                            type='number'
-                            required={true}
-                            variant='outlined'
-                            size='sm'
-                            value={rainfall}
-                            setState={setRainfall} />
                         <BasicButton
                             className='width-120 height-5 font-12 margin-top-10'
                             id='submit'

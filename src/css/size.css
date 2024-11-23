@@ -87,6 +87,18 @@
     width: 200px !important;
 }
 
+.width-220 {
+    width: 220px !important;
+}
+
+.width-240 {
+    width: 240px !important;
+}
+
+.width-260 {
+    width: 260px !important;
+}
+
 .width-300 {
     width: 300px !important;
 }
@@ -250,6 +262,10 @@
     height: 100% !important;
 }
 
+.height-5 {
+    height: 5px !important;
+}
+
 .height-10 {
     height: 10px !important;
 }
@@ -328,6 +344,10 @@
 
 .height-200 {
     height: 200px !important;
+}
+
+.height-250 {
+    height: 250px !important;
 }
 
 .height-400 {

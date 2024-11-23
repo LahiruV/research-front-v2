@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './sidebar-component.css';
 import { company_name } from '@zenra/configs';
@@ -7,7 +7,7 @@ import Inventory2Icon from '@mui/icons-material/Inventory2';
 import BugReportIcon from '@mui/icons-material/BugReport';
 import CoronavirusIcon from '@mui/icons-material/Coronavirus';
 import { useSelector } from 'react-redux';
-import { RootState, setRouteTitle } from '@zenra/store';
+import { RootState, setRouteTitle, setSelectedNav } from '@zenra/store';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import { ListItemButton } from '@mui/material';
@@ -31,12 +31,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isAuthenticated }) => {
         ] : [])
     ];
 
-    const [selected, setSelected] = useState<string>('home');
     const theme = useSelector((state: RootState) => state.theme.theme);
+    const { selectedNav } = useSelector((state: RootState) => state.common);
 
     const handleSelect = (item: { key: string, label: string, path: string, icon: JSX.Element }) => {
         initialService.dispatch(setRouteTitle(item.label));
-        setSelected(item.key);
+        initialService.dispatch(setSelectedNav(item.key));
     }
 
     return (
@@ -48,7 +48,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isAuthenticated }) => {
                         <ListItem key={item.key}>
                             <ListItemButton
                                 onClick={() => handleSelect(item)}
-                                className={`border-radius-5 ${selected === item.key ? `${theme}-selected-sidebar` : ''} ${theme}-sidebar-hover`}
+                                className={`border-radius-5 ${selectedNav === item.key ? `${theme}-selected-sidebar` : ''} ${theme}-sidebar-hover`}
                                 sx={{
                                     borderRadius: '5px',
                                     ":hover": {

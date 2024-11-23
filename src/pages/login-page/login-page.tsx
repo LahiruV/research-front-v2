@@ -99,7 +99,7 @@ const Login: React.FC = () => {
                     setOpen,
                     setIsLoading,
                 });
-                initialService.navigate('/home');
+                initialService.navigate('/amount-predict');
             },
             onError: (error: AxiosError) => {
                 handleNotifyError({

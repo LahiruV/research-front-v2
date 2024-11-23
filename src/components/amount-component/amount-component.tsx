@@ -9,7 +9,7 @@ export interface AmountComponentProps {
 
 const AmountComponent: React.FC<AmountComponentProps> = () => {
 
-    const [amount, setAmount] = React.useState<string | number>('');
+    const [date, setDate] = React.useState<string | number>('');
     const [rainfall, setRainfall] = React.useState<string | number>('');
 
     return (
@@ -30,7 +30,8 @@ const AmountComponent: React.FC<AmountComponentProps> = () => {
                             required={true}
                             variant='outlined'
                             size='sm'
-                            value={amount} setState={setAmount} />
+                            value={date}
+                            setState={setDate} />
                         <InputField
                             className='width-240 font-14'
                             id='rainfall'

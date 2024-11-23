@@ -4,7 +4,6 @@ export { default as Header } from './main-components/header-component/header-com
 export { default as LeftLogRegComponent } from './main-components/log-reg-component/login-reg-left-component';
 export { default as LoginComponent } from './login-component/login-component';
 export { default as RegisterComponent } from './register-component/register-component';
-export { default as HomeComponent } from './home-component/home-component';
 
 export { default as AmountComponent } from './amount-component/amount-component';
 export { default as PriceComponent } from './price-component/price-component';

@@ -6,3 +6,4 @@ export { default as LeftLogRegComponent } from './main-components/log-reg-compon
 export { default as LoginComponent } from './login-component/login-component';
 export { default as RegisterComponent } from './register-component/register-component';
 export { default as HomeComponent } from './home-component/home-component';
+export { default as AmountComponent } from './amount-component/amount-component';

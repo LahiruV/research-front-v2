@@ -24,10 +24,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isAuthenticated }) => {
     const navItems = [
         { key: 'home', label: 'Home', path: '/home', icon: <HomeIcon /> },
         ...(isAuthenticated ? [
-            { key: 'amount-predict', label: 'Amount Predict', path: '/amount-predict', icon: <InfoIcon /> },
-            { key: 'price-predict', label: 'Price Predict', path: '/price-predict', icon: <InfoIcon /> },
-            { key: 'bug-predict', label: 'Bug Predict', path: '/bug-predict', icon: <InfoIcon /> },
-            { key: 'fungus-predict', label: 'Fungus Predict', path: '/fungus-predict', icon: <InfoIcon /> },
+            { key: 'amount-predict', label: 'Amount', path: '/amount-predict', icon: <InfoIcon /> },
+            { key: 'price-predict', label: 'Price', path: '/price-predict', icon: <InfoIcon /> },
+            { key: 'bug-predict', label: 'Bug', path: '/bug-predict', icon: <InfoIcon /> },
+            { key: 'fungus-predict', label: 'Fungus', path: '/fungus-predict', icon: <InfoIcon /> },
         ] : [])
     ];
 

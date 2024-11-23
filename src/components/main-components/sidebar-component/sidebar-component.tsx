@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './sidebar-component.css';
 import { company_name } from '@zenra/configs';
-import HomeIcon from '@mui/icons-material/Home';
-import InfoIcon from '@mui/icons-material/Info';
-
+import PriceChangeIcon from '@mui/icons-material/PriceChange';
+import Inventory2Icon from '@mui/icons-material/Inventory2';
+import BugReportIcon from '@mui/icons-material/BugReport';
+import CoronavirusIcon from '@mui/icons-material/Coronavirus';
 import { useSelector } from 'react-redux';
 import { RootState, setRouteTitle } from '@zenra/store';
 import List from '@mui/material/List';
@@ -22,12 +23,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isAuthenticated }) => {
     const initialService = useInitialService()
 
     const navItems = [
-        { key: 'home', label: 'Home', path: '/home', icon: <HomeIcon /> },
         ...(isAuthenticated ? [
-            { key: 'amount-predict', label: 'Amount', path: '/amount-predict', icon: <InfoIcon /> },
-            { key: 'price-predict', label: 'Price', path: '/price-predict', icon: <InfoIcon /> },
-            { key: 'bug-predict', label: 'Bug', path: '/bug-predict', icon: <InfoIcon /> },
-            { key: 'fungus-predict', label: 'Fungus', path: '/fungus-predict', icon: <InfoIcon /> },
+            { key: 'amount-predict', label: 'Amount', path: '/amount-predict', icon: <Inventory2Icon /> },
+            { key: 'price-predict', label: 'Price', path: '/price-predict', icon: <PriceChangeIcon /> },
+            { key: 'bug-predict', label: 'Bug', path: '/bug-predict', icon: <BugReportIcon /> },
+            { key: 'fungus-predict', label: 'Fungus', path: '/fungus-predict', icon: <CoronavirusIcon /> },
         ] : [])
     ];
 

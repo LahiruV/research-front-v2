@@ -1,15 +1,22 @@
 import React from 'react';;
 import './amount-component.css';
 import { Box, Typography } from '@mui/material';
-import { BasicButton, InputField } from '@zenra/widgets';
+import { BasicButton, InputField, NotificationWidget } from '@zenra/widgets';
+import { AmountResponse } from '@zenra/model';
 
 export interface AmountComponentProps {
-    onClick: () => void
+    onClick: (e: React.FormEvent) => void;
     date: string | number
     setDate: (date: string | number) => void
+    isLoading?: boolean
+    notification: string
+    isSuccessful: boolean
+    open: boolean
+    data: AmountResponse
+    setOpen: () => void;
 }
 
-const AmountComponent: React.FC<AmountComponentProps> = ({ onClick, date, setDate }: AmountComponentProps) => {
+const AmountComponent: React.FC<AmountComponentProps> = ({ onClick, date, setDate, isLoading, notification, isSuccessful, open, data, setOpen }: AmountComponentProps) => {
 
     return (
         <div className='flex align-items-center justify-content-start font-12'>
@@ -38,7 +45,9 @@ const AmountComponent: React.FC<AmountComponentProps> = ({ onClick, date, setDat
                             colors='primary'
                             variant='solid'
                             size='sm'
-                            type='submit' />
+                            type='submit'
+                            isLoading={isLoading}
+                        />
                     </Box >
                 </form>
             </Box>
@@ -49,10 +58,19 @@ const AmountComponent: React.FC<AmountComponentProps> = ({ onClick, date, setDat
                 </Typography>
                 <Box className='padding-10 flex flex-direction-column align-items-center'>
                     <Typography className='font-13 margin-bottom-5'>
-                        <span className='font-12'> Full Amount is : </span> 100
+                        <span className='font-12'> Full Amount is : </span> {data.Ensemble.toFixed(2)}
                     </Typography>
                 </Box>
             </Box>
+            <NotificationWidget
+                id='notification'
+                className='font-12'
+                label={notification}
+                variant='solid'
+                isSuccessful={isSuccessful}
+                open={open}
+                setOpen={setOpen}
+            />
         </div >
     );
 };

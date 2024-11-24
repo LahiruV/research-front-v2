@@ -13,10 +13,12 @@ export interface AmountComponentProps {
     isSuccessful: boolean
     open: boolean
     data: AmountResponse
+    year: number
+    month: number
     setOpen: () => void;
 }
 
-const AmountComponent: React.FC<AmountComponentProps> = ({ onClick, date, setDate, isLoading, notification, isSuccessful, open, data, setOpen }: AmountComponentProps) => {
+const AmountComponent: React.FC<AmountComponentProps> = ({ onClick, date, setDate, isLoading, notification, isSuccessful, open, data, setOpen, year, month }: AmountComponentProps) => {
 
     return (
         <div className='flex align-items-center justify-content-start font-12'>
@@ -57,9 +59,15 @@ const AmountComponent: React.FC<AmountComponentProps> = ({ onClick, date, setDat
                     Result
                 </Typography>
                 <Box className='padding-10 flex flex-direction-column align-items-center'>
-                    <Typography className='font-13 margin-bottom-5'>
-                        <span className='font-12'> Full Amount is : </span> {data.Ensemble.toFixed(2)}
-                    </Typography>
+                    {(year && month) ? (
+                        <Typography className='font-13 margin-bottom-5'>
+                            <span className='font-12'> Predicted <b>{year} / {month}</b> : </span> {data.Ensemble.toFixed(2)}
+                        </Typography>
+                    ) : (
+                        <Typography className='font-13 margin-bottom-5'>
+                            <span className='font-12'>Fill the form to predict the amount</span>
+                        </Typography>
+                    )}
                 </Box>
             </Box>
             <NotificationWidget

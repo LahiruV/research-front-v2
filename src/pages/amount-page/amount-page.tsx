@@ -17,10 +17,14 @@ const Amount: React.FC = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [open, setOpen] = useState(false);
     const [isSuccessful, setIsSuccessful] = useState(false);
+    const [year, setYear] = useState<number>(0);
+    const [month, setMonth] = useState<number>(0);
 
     const onClick = (e: React.FormEvent) => {
         e.preventDefault();
         const [year, month] = (typeof date === 'string' ? date : '').split('-').map(Number);
+        setYear(year);
+        setMonth(month);
         if (!year || !month) {
             console.error('Invalid date format');
             setIsLoading(false);
@@ -61,6 +65,8 @@ const Amount: React.FC = () => {
             isSuccessful={isSuccessful}
             open={open}
             data={amount}
+            year={year}
+            month={month}
             setOpen={() => setOpen(!open)}
         />
     );

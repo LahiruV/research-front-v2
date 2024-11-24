@@ -9,4 +9,6 @@ export type { LoggedUser } from './user-model/user-model';
 export type {
     AmountPayload,
     AmountResponse,
+    PricePayload,
+    PriceResponse,
 } from './api-model/api-model';

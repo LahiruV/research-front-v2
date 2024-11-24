@@ -1,1 +1,2 @@
-export const amount = 'predict'
+export const amount = 'amount'
+export const price = 'price'

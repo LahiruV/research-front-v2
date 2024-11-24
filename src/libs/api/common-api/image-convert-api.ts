@@ -2,7 +2,6 @@ import axios from "axios";
 import { useQuery } from '@tanstack/react-query';
 import { ApiBaseUrl } from "@zenra/configs"
 import { image_base64 } from "@zenra/controller";
-import { getAuthenticated, postAuthenticated } from "@zenra/functions";
 
 export const Base64ImageConverter = (file: File, isExecute: boolean) => {
     const formData = new FormData();
@@ -21,29 +20,4 @@ export const Base64ImageConverter = (file: File, isExecute: boolean) => {
         status,
         error
     };
-};
-
-export const fetchProtectedData = async () => {
-    try {
-        const response = await getAuthenticated('/protected-endpoint');
-        return response.data;
-    } catch (error) {
-        console.error('Failed to fetch protected data', error);
-        throw error;
-    }
-};
-
-interface ProtectedData extends Record<string, unknown> {
-    id: number;
-    name: string;
-}
-
-export const postProtectedData = async (data: ProtectedData) => {
-    try {
-        const response = await postAuthenticated('/protected-endpoint', data);
-        return response.data;
-    } catch (error) {
-        console.error('Failed to post protected data', error);
-        throw error;
-    }
 };

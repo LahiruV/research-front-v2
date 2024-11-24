@@ -4,12 +4,12 @@ import { Box, Typography } from '@mui/material';
 import { BasicButton, InputField } from '@zenra/widgets';
 
 export interface AmountComponentProps {
-    isAuthenticated?: boolean
+    onClick: () => void
+    date: string | number
+    setDate: (date: string | number) => void
 }
 
-const AmountComponent: React.FC<AmountComponentProps> = () => {
-
-    const [date, setDate] = React.useState<string | number>('');
+const AmountComponent: React.FC<AmountComponentProps> = ({ onClick, date, setDate }: AmountComponentProps) => {
 
     return (
         <div className='flex align-items-center justify-content-start font-12'>
@@ -18,7 +18,7 @@ const AmountComponent: React.FC<AmountComponentProps> = () => {
                 <Typography variant='h6' className='text-align-center padding-top-10 font-16 bolder'>
                     Amount Prediction Form
                 </Typography>
-                <form onSubmit={() => { }} className='width-max'>
+                <form onSubmit={onClick} className='width-max'>
                     <Box className='padding-10 flex flex-direction-column align-items-center'>
                         <InputField
                             className='width-240 font-14 margin-bottom-5'

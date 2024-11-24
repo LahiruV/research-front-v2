@@ -22,7 +22,6 @@ const AmountComponent: React.FC<AmountComponentProps> = ({ onClick, date, setDat
 
     return (
         <div className='flex align-items-center justify-content-start font-12'>
-            {/* <Box className='light-background width-400 height-400 flex justify-content-center align-items-center border-radius-15'> */}
             <Box className='light-background width-60p height-250 border-radius-15 border-shadow'>
                 <Typography variant='h6' className='text-align-center padding-top-10 font-16 bolder'>
                     Amount Prediction Form

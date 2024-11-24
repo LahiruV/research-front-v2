@@ -1,15 +1,23 @@
 import React from 'react';;
 import { Box, Typography } from '@mui/material';
-import { BasicButton, InputField } from '@zenra/widgets';
+import { BasicButton, InputField, NotificationWidget } from '@zenra/widgets';
+import { PriceResponse } from '@zenra/model';
 
 export interface PriceComponentProps {
-    isAuthenticated?: boolean
+    onClick: (e: React.FormEvent) => void;
+    date: string | number
+    setDate: (date: string | number) => void
+    isLoading?: boolean
+    notification: string
+    isSuccessful: boolean
+    open: boolean
+    data: PriceResponse
+    year: number
+    month: number
+    setOpen: () => void;
 }
 
-const PriceComponent: React.FC<PriceComponentProps> = () => {
-
-    const [date, setDate] = React.useState<string | number>('');
-    const [rainfall, setRainfall] = React.useState<string | number>('');
+const PriceComponent: React.FC<PriceComponentProps> = ({ onClick, date, setDate, isLoading, notification, isSuccessful, open, data, setOpen, year, month }: PriceComponentProps) => {
 
     return (
         <div className='flex align-items-center justify-content-start font-12'>
@@ -17,7 +25,7 @@ const PriceComponent: React.FC<PriceComponentProps> = () => {
                 <Typography variant='h6' className='text-align-center padding-top-10 font-16 bolder'>
                     Price Prediction Form
                 </Typography>
-                <form onSubmit={() => { }} className='width-max'>
+                <form onSubmit={onClick} className='width-max'>
                     <Box className='padding-10 flex flex-direction-column align-items-center'>
                         <InputField
                             className='width-240 font-14 margin-bottom-5'
@@ -30,17 +38,6 @@ const PriceComponent: React.FC<PriceComponentProps> = () => {
                             size='sm'
                             value={date}
                             setState={setDate} />
-                        <InputField
-                            className='width-240 font-14'
-                            id='total-amount'
-                            label='Total Amount'
-                            placeholder='Enter Total Amount'
-                            type='number'
-                            required={true}
-                            variant='outlined'
-                            size='sm'
-                            value={rainfall}
-                            setState={setRainfall} />
                         <BasicButton
                             className='width-120 height-5 font-12 margin-top-10'
                             id='submit'
@@ -48,7 +45,9 @@ const PriceComponent: React.FC<PriceComponentProps> = () => {
                             colors='primary'
                             variant='solid'
                             size='sm'
-                            type='submit' />
+                            type='submit'
+                            isLoading={isLoading}
+                        />
                     </Box >
                 </form>
             </Box>
@@ -58,11 +57,26 @@ const PriceComponent: React.FC<PriceComponentProps> = () => {
                     Result
                 </Typography>
                 <Box className='padding-10 flex flex-direction-column align-items-center'>
-                    <Typography className='font-13 margin-bottom-5'>
-                        <span className='font-12'> Price Prediction: </span> 1000
-                    </Typography>
+                    {(year && month) ? (
+                        <Typography className='font-13 margin-bottom-5'>
+                            <span className='font-12'> Predicted <b>{year} / {month}</b> : </span> {data.ensemble_prediction.toFixed(2)}
+                        </Typography>
+                    ) : (
+                        <Typography className='font-13 margin-bottom-5'>
+                            <span className='font-12'>Fill the form to predict the price</span>
+                        </Typography>
+                    )}
                 </Box>
             </Box>
+            <NotificationWidget
+                id='notification'
+                className='font-12'
+                label={notification}
+                variant='solid'
+                isSuccessful={isSuccessful}
+                open={open}
+                setOpen={setOpen}
+            />
         </div>
     );
 };

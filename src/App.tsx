@@ -38,7 +38,7 @@ const App: React.FC = () => {
           <Route path="/amount-predict" element={renderMainBaseLayout(true, Amount)} />
           <Route path="/price-predict" element={renderMainBaseLayout(true, Price)} />
           <Route path="/bug-predict" element={renderMainBaseLayout(true, Bug)} />
-          <Route path="/fungus-predict" element={renderMainBaseLayout(true, Fungus)} />
+          <Route path="/disease-predict" element={renderMainBaseLayout(true, Fungus)} />
         </Routes>
       </Router>
       <ReactQueryDevtools initialIsOpen={false} />

@@ -27,7 +27,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isAuthenticated }) => {
             { key: 'amount-predict', label: 'Amount', path: '/amount-predict', icon: <Inventory2Icon /> },
             { key: 'price-predict', label: 'Price', path: '/price-predict', icon: <PriceChangeIcon /> },
             { key: 'bug-predict', label: 'Bug', path: '/bug-predict', icon: <BugReportIcon /> },
-            { key: 'fungus-predict', label: 'Fungus', path: '/fungus-predict', icon: <CoronavirusIcon /> },
+            { key: 'disease-predict', label: 'Disease', path: '/disease-predict', icon: <CoronavirusIcon /> },
         ] : [])
     ];
 

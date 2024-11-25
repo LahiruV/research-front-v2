@@ -6,7 +6,7 @@ import { amount, bug, price } from "@zenra/controller";
 export const AmountMutateFunc = () => {
     const { mutate: amountMutate } = useMutation({
         mutationFn: async (payload: AmountPayload) => {
-            const response = await axios.post<AmountResponse>(`${'http://127.0.0.1:5000/'}${amount}`, payload);
+            const response = await axios.post<AmountResponse>(`${'http://127.0.0.1:5001/'}${amount}`, payload);
             return response.data;
         },
         onSuccess: (response: AmountResponse) => response,
@@ -20,7 +20,7 @@ export const AmountMutateFunc = () => {
 export const PriceMutateFunc = () => {
     const { mutate: priceMutate } = useMutation({
         mutationFn: async (payload: PricePayload) => {
-            const response = await axios.post<PriceResponse>(`${'http://127.0.0.1:5000/'}${price}`, payload);
+            const response = await axios.post<PriceResponse>(`${'http://127.0.0.1:5002/'}${price}`, payload);
             return response.data;
         },
         onSuccess: (response: PriceResponse) => response,
@@ -34,7 +34,7 @@ export const PriceMutateFunc = () => {
 export const BugMutateFunc = () => {
     const { mutate: bugMutate } = useMutation({
         mutationFn: async (payload: BugPayload) => {
-            const response = await axios.post<BugResponse>(`${'http://127.0.0.1:5000/'}${bug}`, payload);
+            const response = await axios.post<BugResponse>(`${'http://127.0.0.1:5003/'}${bug}`, payload);
             return response.data;
         },
         onSuccess: (response: BugResponse) => response,

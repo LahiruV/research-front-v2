@@ -9,9 +9,11 @@ export interface InputFileUploadProps {
     label: string
     afterLabel: string
     file: File | null
-    loading: boolean
+    loading?: boolean
     isFileUploaded?: boolean
     colors?: 'primary' | 'neutral' | 'danger' | 'success' | 'warning'
+    variant?: 'solid' | 'outlined' | 'soft'
+    required?: boolean
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
@@ -35,6 +37,8 @@ const InputFileUpload: React.FC<InputFileUploadProps> = ({
     loading,
     isFileUploaded,
     colors,
+    variant,
+    required,
     onChange
 }) => {
 
@@ -45,7 +49,7 @@ const InputFileUpload: React.FC<InputFileUploadProps> = ({
             component="label"
             role={undefined}
             tabIndex={-1}
-            variant="outlined"
+            variant={variant || 'solid'}
             color={colors}
             loading={loading}
             startDecorator={
@@ -70,7 +74,7 @@ const InputFileUpload: React.FC<InputFileUploadProps> = ({
             {
                 isFileUploaded ? (afterLabel || '') : !loading ? (label || '') : ('')
             }
-            <VisuallyHiddenInput type="file" onChange={onChange} />
+            <VisuallyHiddenInput type="file" required={required} onChange={onChange} />
         </Button>
     );
 }

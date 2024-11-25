@@ -37,13 +37,14 @@ const BugComponent: React.FC<BugComponentProps> = ({ onClick, isLoading, notific
                 <form onSubmit={onClick} className='width-max'>
                     <Box className='padding-10 flex flex-direction-column align-items-center'>
                         <InputFileUpload
-                            id='profile-image'
-                            className='margin-top-10 purple-main font-11'
-                            label="Upload Profile Image"
-                            afterLabel="Uploaded"
+                            id='image'
+                            className='margin-bottom-10 margin-top-10 font-11 light-font'
+                            label="Select Image"
+                            afterLabel="Selected"
                             file={file}
-                            loading={isFileUploaded}
                             isFileUploaded={isFileUploaded}
+                            variant='outlined'
+                            required={true}
                             onChange={handleFileChange}
                         />
                         <BasicButton

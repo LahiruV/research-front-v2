@@ -24,9 +24,9 @@ export interface PriceResponse {
     };
 }
 
-export interface BugPayload {
-    file: File;
-}
+export type BugPayload = {
+    file?: File;
+} | FormData;
 
 export interface BugResponse {
     class: string;

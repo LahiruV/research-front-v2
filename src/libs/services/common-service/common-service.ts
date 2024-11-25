@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+//E8MYqv7baPj1SCspWTUFqT1z
 export const removeBackground = async (file: File): Promise<File> => {
     const apiKey = 'key';
     const formData = new FormData();

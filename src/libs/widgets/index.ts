@@ -6,7 +6,6 @@ export { default as InputField } from './input-field/input-field';
 export { default as AccountDemoSignedOut } from './account-signed-out/account-signed-out';
 export { default as InputFileUpload } from './input-file-upload-button/input-file-upload-button';
 export { default as NotificationWidget } from './notificationwidgetprops/notificationwidgetprops';
-export { default as DataGridTable } from './data-grid-table/data-grid-table';
 export { default as AlertDialogModal } from './alert-dialog-modal/alert-dialog-modal';
 export { default as CardLayers3d } from './card-layers-3d/card-layers-3d';
 export { default as BasicChip } from './chip/chip';

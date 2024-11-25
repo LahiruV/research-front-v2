@@ -99,7 +99,7 @@ const LoginComponent: React.FC<LoginComponentProps> = ({
                     />
                 </form>
                 <Typography className='font-14 underline italic cursor padding-top-5 align-items-end' onClick={register}>
-                    Login
+                    Register
                 </Typography>
                 <PoweredBy company_name={power_by} />
                 <NotificationWidget

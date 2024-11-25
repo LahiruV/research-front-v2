@@ -61,6 +61,7 @@ const Bug: React.FC = () => {
             isFileUploaded={isFileUploaded}
             setFile={setFile}
             setIsFileUploaded={setIsFileUploaded}
+            setIsLoading={setIsLoading}
         />
     );
 };

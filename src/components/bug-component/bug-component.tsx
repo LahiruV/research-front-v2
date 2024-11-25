@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import { BasicButton, InputFileUpload, NotificationWidget } from '@zenra/widgets';
 import { BugResponse } from '@zenra/model';
+import { removeBackground } from '@zenra/services';
 
 export interface BugComponentProps {
     onClick: (e: React.FormEvent) => void;
@@ -15,16 +16,26 @@ export interface BugComponentProps {
     isFileUploaded: boolean;
     setFile: React.Dispatch<React.SetStateAction<File>>;
     setIsFileUploaded: React.Dispatch<React.SetStateAction<boolean>>;
+    setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const BugComponent: React.FC<BugComponentProps> = ({ onClick, isLoading, notification, isSuccessful, open, data, setOpen, file, isFileUploaded, setFile, setIsFileUploaded }: BugComponentProps) => {
+const BugComponent: React.FC<BugComponentProps> = ({ onClick, isLoading, notification, isSuccessful, open, data, setOpen, file, isFileUploaded, setFile, setIsFileUploaded, setIsLoading }: BugComponentProps) => {
 
-    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        if (e.target.files) {
-            setFile(e.target.files[0]);
+    const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (e.target.files && e.target.files[0]) {
+            const uploadedFile = e.target.files[0];
+            setIsLoading(true);
+            setIsFileUploaded(true);
+            try {
+                const processedFile = await removeBackground(uploadedFile);
+                setFile(processedFile);
+                setIsLoading(false);
+            } catch (error) {
+                console.error('Error processing file:', error);
+                setIsLoading(false);
+            }
         }
-        setIsFileUploaded(true);
-    }
+    };
 
     return (
         <div className='flex align-items-center justify-content-start font-12'>

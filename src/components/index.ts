@@ -8,3 +8,4 @@ export { default as RegisterComponent } from './register-component/register-comp
 export { default as AmountComponent } from './amount-component/amount-component';
 export { default as PriceComponent } from './price-component/price-component';
 export { default as BugComponent } from './bug-component/bug-component';
+export { default as FungusComponent } from './fungus-component/fungus-component';

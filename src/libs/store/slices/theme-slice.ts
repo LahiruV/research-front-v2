@@ -6,7 +6,7 @@ type ThemeState = {
 };
 
 const initialState: ThemeState = {
-    theme: 'light',
+    theme: 'dark',
     themeButton: false,
 };
 

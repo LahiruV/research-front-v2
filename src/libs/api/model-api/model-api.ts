@@ -1,7 +1,7 @@
 import { useMutation } from "@tanstack/react-query";
 import axios, { AxiosError } from "axios";
-import { AmountPayload, AmountResponse, BugPayload, BugResponse, PricePayload, PriceResponse } from "@zenra/model";
-import { amount, bug, price } from "@zenra/controller";
+import { AmountPayload, AmountResponse, BugPayload, BugResponse, DiseasePayload, DiseaseResponse, PricePayload, PriceResponse } from "@zenra/model";
+import { amount, bug, disease, price } from "@zenra/controller";
 
 export const AmountMutateFunc = () => {
     const { mutate: amountMutate } = useMutation({
@@ -42,6 +42,20 @@ export const BugMutateFunc = () => {
     });
     return {
         bugMutate,
+    };
+};
+
+export const DiseaseMutateFunc = () => {
+    const { mutate: disaeasMutate } = useMutation({
+        mutationFn: async (payload: DiseasePayload) => {
+            const response = await axios.post<DiseaseResponse>(`${'http://127.0.0.1:5004/'}${disease}`, payload);
+            return response.data;
+        },
+        onSuccess: (response: BugResponse) => response,
+        onError: (err: AxiosError) => err,
+    });
+    return {
+        disaeasMutate,
     };
 };
 

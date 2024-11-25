@@ -32,3 +32,13 @@ export interface BugResponse {
     class: string;
     confidence: number;
 }
+
+export type DiseasePayload = {
+    file?: File;
+} | FormData;
+
+export interface DiseaseResponse {
+    class: string;
+    confidence: number;
+}
+

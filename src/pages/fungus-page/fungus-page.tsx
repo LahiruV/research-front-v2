@@ -1,17 +1,17 @@
 
-import { BugMutateFunc } from '@zenra/api';
+import { DiseaseMutateFunc } from '@zenra/api';
 import { FungusComponent } from '@zenra/components';
 import { handleNotifyError } from '@zenra/functions';
 import { BugResponse } from '@zenra/model';
 import { removeBackground, useInitialService } from '@zenra/services';
-import { RootState, setBug } from '@zenra/store';
+import { RootState, setDisease } from '@zenra/store';
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 
 const Fungus: React.FC = () => {
     const initialService = useInitialService();
-    const { bugMutate } = BugMutateFunc();
-    const { bug } = useSelector((state: RootState) => state.model);
+    const { disaeasMutate } = DiseaseMutateFunc();
+    const { disease } = useSelector((state: RootState) => state.model);
     const [notification, setNotification] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [open, setOpen] = useState(false);
@@ -26,13 +26,13 @@ const Fungus: React.FC = () => {
             const processedFile = await removeBackground(file);
             const formData = new FormData();
             formData.append('file', processedFile);
-            bugMutate(formData, {
+            disaeasMutate(formData, {
                 onSuccess: (response: BugResponse) => {
                     setIsLoading(false);
-                    setNotification(('Fungus predicted successfully').toLocaleUpperCase());
+                    setNotification(('Disease predicted successfully').toLocaleUpperCase());
                     setIsSuccessful(true);
                     setOpen(true);
-                    initialService.dispatch(setBug(response));
+                    initialService.dispatch(setDisease(response));
                     setIsFileUploaded(false);
                     setFile({ name: '', size: 0, type: '' } as File);
                 },
@@ -64,7 +64,7 @@ const Fungus: React.FC = () => {
             notification={notification}
             isSuccessful={isSuccessful}
             open={open}
-            data={bug}
+            data={disease}
             setOpen={() => setOpen(false)}
             file={file}
             isFileUploaded={isFileUploaded}

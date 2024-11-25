@@ -13,4 +13,6 @@ export type {
     PriceResponse,
     BugPayload,
     BugResponse,
+    DiseasePayload,
+    DiseaseResponse,
 } from './api-model/api-model';

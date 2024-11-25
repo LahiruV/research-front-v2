@@ -1,7 +1,6 @@
 import { useMutation } from "@tanstack/react-query";
 import axios, { AxiosError } from "axios";
 import { AmountPayload, AmountResponse, BugPayload, BugResponse, PricePayload, PriceResponse } from "@zenra/model";
-// import { ApiBaseUrl } from "@zenra/configs";
 import { amount, bug, price } from "@zenra/controller";
 
 export const AmountMutateFunc = () => {

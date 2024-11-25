@@ -30,10 +30,10 @@ const FungusComponent: React.FC<FungusComponentProps> = ({ onClick, isLoading, n
         <div className='flex align-items-center justify-content-start font-12'>
             <Box className='light-background width-60p height-250 border-radius-15 light-box-shadow'>
                 <Typography variant='h6' className='text-align-center padding-top-10 font-16 bolder'>
-                    Disease Prediction
+                    Disease Identification of Rubber Plantation
                 </Typography>
                 <form onSubmit={onClick} className='width-max'>
-                    <Box className='padding-10 flex flex-direction-column align-items-center'>
+                    <Box className='padding-10 flex flex-direction-column align-items-center margin-top-10'>
                         <InputFileUpload
                             id='image'
                             className='margin-bottom-10 margin-top-10 font-11 light-font'

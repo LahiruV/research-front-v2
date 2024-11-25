@@ -24,10 +24,10 @@ const AmountComponent: React.FC<AmountComponentProps> = ({ onClick, date, setDat
         <div className='flex align-items-center justify-content-start font-12'>
             <Box className='light-background width-60p height-250 border-radius-15 light-box-shadow'>
                 <Typography variant='h6' className='text-align-center padding-top-10 font-16 bolder'>
-                    Amount Prediction Form
+                    Quantity Prediction of Rubber Plantation
                 </Typography>
                 <form onSubmit={onClick} className='width-max'>
-                    <Box className='padding-10 flex flex-direction-column align-items-center'>
+                    <Box className='padding-10 flex flex-direction-column align-items-center margin-top-10'>
                         <InputField
                             className='width-240 font-14 margin-bottom-5'
                             id='date'
@@ -64,7 +64,7 @@ const AmountComponent: React.FC<AmountComponentProps> = ({ onClick, date, setDat
                         </Typography>
                     ) : (
                         <Typography className='font-13 margin-bottom-5'>
-                            <span className='font-12'>Fill the form to predict the amount</span>
+                            <span className='font-12'>Fill the form to predict the quantity</span>
                         </Typography>
                     )}
                 </Box>

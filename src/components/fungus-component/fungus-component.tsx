@@ -28,7 +28,7 @@ const FungusComponent: React.FC<FungusComponentProps> = ({ onClick, isLoading, n
 
     return (
         <div className='flex align-items-center justify-content-start font-12'>
-            <Box className='light-background width-60p height-250 border-radius-15 light-box-shadow'>
+            <Box className='light-background width-60p  height-450 border-radius-15 light-box-shadow'>
                 <Typography variant='h6' className='text-align-center padding-top-10 font-16 bolder margin-top-10'>
                     Disease Identification of Rubber Plantation
                 </Typography>
@@ -45,8 +45,13 @@ const FungusComponent: React.FC<FungusComponentProps> = ({ onClick, isLoading, n
                             required={true}
                             onChange={handleFileChange}
                         />
+                        {isFileUploaded && (
+                            <Box className='margin-top-10'>
+                                <img src={URL.createObjectURL(file)} alt="Selected File" className='width-300 height-300 height-auto border-radius-10' />
+                            </Box>
+                        )}
                         <BasicButton
-                            className='width-120 height-5 font-12 margin-top-10'
+                            className='width-120 height-5 font-12 margin-top-25'
                             id='submit'
                             label='Submit'
                             colors='primary'
@@ -59,7 +64,7 @@ const FungusComponent: React.FC<FungusComponentProps> = ({ onClick, isLoading, n
                 </form>
             </Box>
 
-            <Box className='light-background width-40p height-250 border-radius-15 margin-left-10 light-box-shadow'>
+            <Box className='light-background width-40p height-250 border-radius-15 margin-left-10 light-box-shadow height-450'>
                 <Typography variant='h6' className='text-align-center padding-top-10 font-16 bolder margin-top-10'>
                     Result
                 </Typography>

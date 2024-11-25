@@ -354,6 +354,18 @@
     height: 400px !important;
 }
 
+.height-450 {
+    height: 450px !important;
+}
+
+.height-500 {
+    height: 500px !important;
+}
+
+.height-600 {
+    height: 600px !important;
+}
+
 /* Max-Height Classes */
 .max-height-10 {
     max-height: 10px !important;

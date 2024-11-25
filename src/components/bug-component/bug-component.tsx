@@ -2,7 +2,6 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import { BasicButton, InputFileUpload, NotificationWidget } from '@zenra/widgets';
 import { BugResponse } from '@zenra/model';
-import { removeBackground } from '@zenra/services';
 
 export interface BugComponentProps {
     onClick: (e: React.FormEvent) => void;
@@ -11,37 +10,21 @@ export interface BugComponentProps {
     isSuccessful: boolean
     open: boolean
     data: BugResponse
-    setOpen: React.Dispatch<React.SetStateAction<boolean>>
+    setOpen: () => void;
     file: File;
     isFileUploaded: boolean;
     setFile: React.Dispatch<React.SetStateAction<File>>;
     setIsFileUploaded: React.Dispatch<React.SetStateAction<boolean>>;
-    setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
-    setNotification: React.Dispatch<React.SetStateAction<string>>;
-    setIsSuccessful: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const BugComponent: React.FC<BugComponentProps> = ({ onClick, isLoading, notification, isSuccessful, open, data, setOpen, file, isFileUploaded, setFile, setIsFileUploaded, setIsLoading, setNotification, setIsSuccessful }: BugComponentProps) => {
+const BugComponent: React.FC<BugComponentProps> = ({ onClick, isLoading, notification, isSuccessful, open, data, setOpen, file, isFileUploaded, setFile, setIsFileUploaded }: BugComponentProps) => {
 
-    const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
-        if (e.target.files && e.target.files[0]) {
-            const uploadedFile = e.target.files[0];
-            setIsLoading(true);
-            setIsFileUploaded(true);
-            try {
-                const processedFile = await removeBackground(uploadedFile);
-                setFile(processedFile);
-                setIsLoading(false);
-            } catch {
-                setIsLoading(false);
-                setIsSuccessful(false);
-                setNotification('Failed to process the image');
-                setOpen(true);
-                setIsFileUploaded(false);
-                setFile({ name: '', size: 0, type: '' } as File);
-            }
+    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (e.target.files) {
+            setFile(e.target.files[0]);
         }
-    };
+        setIsFileUploaded(true);
+    }
 
     return (
         <div className='flex align-items-center justify-content-start font-12'>
@@ -99,7 +82,7 @@ const BugComponent: React.FC<BugComponentProps> = ({ onClick, isLoading, notific
                 variant='solid'
                 isSuccessful={isSuccessful}
                 open={open}
-                setOpen={() => setOpen(false)}
+                setOpen={setOpen}
             />
         </div >
     );

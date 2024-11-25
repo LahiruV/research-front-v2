@@ -35,7 +35,7 @@ const LoginComponent: React.FC<LoginComponentProps> = ({
 }) => {
     const initialService = useInitialService();
     const register = () => {
-        initialService.navigate('/');
+        initialService.navigate('/register');
     }
 
     return (

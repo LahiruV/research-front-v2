@@ -29,7 +29,7 @@ const BugComponent: React.FC<BugComponentProps> = ({ onClick, isLoading, notific
     return (
         <div className='flex align-items-center justify-content-start font-12'>
             <Box className='light-background width-60p height-250 border-radius-15 light-box-shadow'>
-                <Typography variant='h6' className='text-align-center padding-top-10 font-16 bolder'>
+                <Typography variant='h6' className='text-align-center padding-top-10 font-16 bolder margin-top-10'>
                     Pest Identification of Rubber Plantation
                 </Typography>
                 <form onSubmit={onClick} className='width-max'>
@@ -60,7 +60,7 @@ const BugComponent: React.FC<BugComponentProps> = ({ onClick, isLoading, notific
             </Box>
 
             <Box className='light-background width-40p height-250 border-radius-15 margin-left-10 light-box-shadow'>
-                <Typography variant='h6' className='text-align-center padding-top-10 font-16 bolder'>
+                <Typography variant='h6' className='text-align-center padding-top-10 font-16 bolder margin-top-10'>
                     Result
                 </Typography>
                 <Box className='padding-10 flex flex-direction-column align-items-center'>

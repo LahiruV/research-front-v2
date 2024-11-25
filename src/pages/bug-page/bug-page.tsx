@@ -1,49 +1,39 @@
 
-import { AmountMutateFunc } from '@zenra/api';
+import { BugMutateFunc } from '@zenra/api';
 import { BugComponent } from '@zenra/components';
 import { handleNotifyError } from '@zenra/functions';
-import { AmountPayload, AmountResponse } from '@zenra/model';
+import { BugResponse } from '@zenra/model';
 import { useInitialService } from '@zenra/services';
-import { RootState, setAmount } from '@zenra/store';
+import { RootState, setBug } from '@zenra/store';
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 
 const Bug: React.FC = () => {
     const initialService = useInitialService();
-    const { amountMutate } = AmountMutateFunc();
-    const { amount } = useSelector((state: RootState) => state.model);
-    const [date, setDate] = React.useState<string | number>('');
+    const { bugMutate } = BugMutateFunc();
+    const { bug } = useSelector((state: RootState) => state.model);
     const [notification, setNotification] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [open, setOpen] = useState(false);
     const [isSuccessful, setIsSuccessful] = useState(false);
-    const [year, setYear] = useState<number>(0);
-    const [month, setMonth] = useState<number>(0);
     const [file, setFile] = useState<File>({ name: '', size: 0, type: '' } as File);
     const [isFileUploaded, setIsFileUploaded] = useState(false);
 
     const onClick = (e: React.FormEvent) => {
         e.preventDefault();
-        const [year, month] = (typeof date === 'string' ? date : '').split('-').map(Number);
-        setYear(year);
-        setMonth(month);
-        if (!year || !month) {
-            console.error('Invalid date format');
-            setIsLoading(false);
-            return;
-        }
         setIsLoading(true);
-        const payload: AmountPayload = {
-            Year: year,
-            Month: month,
-        };
-        amountMutate(payload, {
-            onSuccess: (response: AmountResponse) => {
+        const formData = new FormData();
+        formData.append('file', file);
+
+        bugMutate(formData, {
+            onSuccess: (response: BugResponse) => {
                 setIsLoading(false);
-                setNotification(('Amount predicted successfully').toLocaleUpperCase());
+                setNotification(('Bug predicted successfully').toLocaleUpperCase());
                 setIsSuccessful(true);
                 setOpen(true);
-                initialService.dispatch(setAmount(response));
+                initialService.dispatch(setBug(response));
+                setIsFileUploaded(false);
+                setFile({ name: '', size: 0, type: '' } as File);
             },
             onError: (err) => {
                 handleNotifyError({
@@ -65,9 +55,7 @@ const Bug: React.FC = () => {
             notification={notification}
             isSuccessful={isSuccessful}
             open={open}
-            data={amount}
-            year={year}
-            month={month}
+            data={bug}
             setOpen={() => setOpen(false)}
             file={file}
             isFileUploaded={isFileUploaded}

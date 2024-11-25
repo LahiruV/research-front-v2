@@ -1,9 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { AmountResponse, PriceResponse } from '@zenra/model';
+import { AmountResponse, BugResponse, PriceResponse } from '@zenra/model';
 
 type ModelState = {
     amount: AmountResponse;
     price: PriceResponse;
+    bug: BugResponse;
 };
 
 const initialState: ModelState = {
@@ -21,6 +22,10 @@ const initialState: ModelState = {
             RandomForest: 0,
         },
     },
+    bug: {
+        class: '',
+        confidence: 0,
+    },
 };
 
 export const modelSlice = createSlice({
@@ -32,9 +37,12 @@ export const modelSlice = createSlice({
         },
         setPrice: (state, action) => {
             state.price = action.payload
-        }
+        },
+        setBug: (state, action) => {
+            state.bug = action.payload
+        },
     },
 });
 
-export const { setAmount, setPrice } = modelSlice.actions;
+export const { setAmount, setPrice, setBug } = modelSlice.actions;
 export default modelSlice.reducer;

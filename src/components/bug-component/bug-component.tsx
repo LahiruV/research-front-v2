@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import { BasicButton, InputFileUpload, NotificationWidget } from '@zenra/widgets';
-import { AmountResponse } from '@zenra/model';
+import { BugResponse } from '@zenra/model';
 
 export interface BugComponentProps {
     onClick: (e: React.FormEvent) => void;
@@ -9,9 +9,7 @@ export interface BugComponentProps {
     notification: string
     isSuccessful: boolean
     open: boolean
-    data: AmountResponse
-    year: number
-    month: number
+    data: BugResponse
     setOpen: () => void;
     file: File;
     isFileUploaded: boolean;
@@ -19,7 +17,7 @@ export interface BugComponentProps {
     setIsFileUploaded: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const BugComponent: React.FC<BugComponentProps> = ({ onClick, isLoading, notification, isSuccessful, open, data, setOpen, year, month, file, isFileUploaded, setFile, setIsFileUploaded }: BugComponentProps) => {
+const BugComponent: React.FC<BugComponentProps> = ({ onClick, isLoading, notification, isSuccessful, open, data, setOpen, file, isFileUploaded, setFile, setIsFileUploaded }: BugComponentProps) => {
 
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.files) {
@@ -66,9 +64,9 @@ const BugComponent: React.FC<BugComponentProps> = ({ onClick, isLoading, notific
                     Result
                 </Typography>
                 <Box className='padding-10 flex flex-direction-column align-items-center'>
-                    {(year && month) ? (
+                    {(data) ? (
                         <Typography className='font-13 margin-bottom-5'>
-                            <span className='font-12'> Predicted <b>{year} / {month}</b> : </span> {data.Ensemble.toFixed(2)}
+                            {data.class}
                         </Typography>
                     ) : (
                         <Typography className='font-13 margin-bottom-5'>

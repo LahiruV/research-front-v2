@@ -56,12 +56,14 @@ const Bug: React.FC = () => {
             isSuccessful={isSuccessful}
             open={open}
             data={bug}
-            setOpen={() => setOpen(false)}
+            setOpen={setOpen}
             file={file}
             isFileUploaded={isFileUploaded}
             setFile={setFile}
             setIsFileUploaded={setIsFileUploaded}
             setIsLoading={setIsLoading}
+            setNotification={setNotification}
+            setIsSuccessful={setIsSuccessful}
         />
     );
 };

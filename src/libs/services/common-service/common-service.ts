@@ -1,7 +1,8 @@
 import axios from 'axios';
-//E8MYqv7baPj1SCspWTUFqT1z
+
 export const removeBackground = async (file: File): Promise<File> => {
     const apiKey = 'key';
+    // const apiKey = 'dVBAXrLFDbfPWFK4wX7HMj2q';
     const formData = new FormData();
     formData.append('image_file', file);
     formData.append('size', 'auto');

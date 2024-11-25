@@ -1,20 +1,22 @@
 import React, { useState } from 'react';
-import { AccountDemoSignedOut, AlertDialogModal } from '@zenra/widgets';
+import { AccountDemoSignedOut, AlertDialogModal, CustomizedSwitches } from '@zenra/widgets';
 import { useSelector } from 'react-redux';
-import { RootState } from '@zenra/store';
+import { RootState, toggleTheme } from '@zenra/store';
 import PeopleIcon from '@mui/icons-material/People';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import './header-component.css';
 import { reset_redux } from '@zenra/functions';
+import { useInitialService } from '@zenra/services';
 
 export interface HeaderProps {
     isAuthenticated: boolean
 }
 
 const Header: React.FC<HeaderProps> = ({ isAuthenticated }) => {
-    const { theme } = useSelector((state: RootState) => state.theme);
+    const { theme, themeButton } = useSelector((state: RootState) => state.theme);
     const { loggedUser } = useSelector((state: RootState) => state.user);
     const [open, setOpen] = useState(false);
+    const initialService = useInitialService()
 
     const handleSignOut = () => {
         reset_redux();
@@ -34,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({ isAuthenticated }) => {
         <div>
             <header className={`main-header  ${theme}-background ${theme}-main-header`}>
                 <div>
-
+                    <CustomizedSwitches id='mode-switch' isMaterialUISwitch={true} value={themeButton} setState={() => initialService.dispatch(toggleTheme())} title={themeButton ? 'Dark Mode' : 'Light Mode'} />
                 </div>
                 {isAuthenticated && (
                     <div className='flex align-items-center'>

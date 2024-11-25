@@ -24,3 +24,11 @@ export interface PriceResponse {
     };
 }
 
+export interface BugPayload {
+    file: File;
+}
+
+export interface BugResponse {
+    class: string;
+    confidence: number;
+}

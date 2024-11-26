@@ -28,7 +28,7 @@ const FungusComponent: React.FC<FungusComponentProps> = ({ onClick, isLoading, n
 
     return (
         <div className='flex align-items-center justify-content-start font-12'>
-            <Box className='light-background width-60p border-radius-15 light-box-shadow' sx={{ height: '523px' }}>
+            <Box className='light-background width-60p border-radius-15 light-box-shadow' sx={{ height: '629px' }}>
                 <Typography variant='h6' className='text-align-center padding-top-10 font-16 bolder margin-top-10'>
                     Disease Identification of Rubber Plantation
                 </Typography>
@@ -60,11 +60,16 @@ const FungusComponent: React.FC<FungusComponentProps> = ({ onClick, isLoading, n
                             type='submit'
                             isLoading={isLoading}
                         />
+                        <div className='padding-top-30' style={{ width: '700px', textAlign: 'center' }} >
+                            <span className='italic underline bolder'>Disclaimer </span>
+                            -
+                            The Rubber Plantation Disease Identification platform is designed for informational purposes only. Using advanced convolutional neural networks (CNN), the system provides insights to identify diseases affecting rubber plantations based on trained algorithms. However, the identifications may not fully reflect real-world conditions due to unforeseen variables or data limitations. Users are advised to validate the results independently and consult professionals before making operational or management decisions. The developers are not responsible for any losses or damages incurred from using this platform, and by accessing it, users acknowledge and accept these terms.
+                        </div>
                     </Box >
                 </form>
             </Box>
 
-            <Box className='light-background width-40p border-radius-15 margin-left-10 light-box-shadow' sx={{ height: '523px' }}>
+            <Box className='light-background width-40p border-radius-15 margin-left-10 light-box-shadow' sx={{ height: '629px' }}>
                 <Typography variant='h6' className='text-align-center padding-top-10 font-16 bolder margin-top-10'>
                     Result
                 </Typography>

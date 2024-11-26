@@ -21,7 +21,7 @@ const PriceComponent: React.FC<PriceComponentProps> = ({ onClick, date, setDate,
 
     return (
         <div className='flex align-items-center justify-content-start font-12'>
-            <Box className='light-background width-60p height-250 border-radius-15 light-box-shadow'>
+            <Box className='light-background width-60p border-radius-15 light-box-shadow' sx={{ height: '315px' }}>
                 <Typography variant='h6' className='text-align-center padding-top-10 font-16 bolder margin-top-10'>
                     Price Prediction of Rubber Plantation
                 </Typography>
@@ -48,18 +48,22 @@ const PriceComponent: React.FC<PriceComponentProps> = ({ onClick, date, setDate,
                             type='submit'
                             isLoading={isLoading}
                         />
+                        <div className='padding-top-30' style={{ width: '700px', textAlign: 'center' }} >
+                            <span className='italic underline bolder'>Disclaimer </span>
+                            - The Rubber Price Prediction platform is for informational purposes only, and while we use advanced machine learning models trained on historical data from 2000 to 2023, the predictions provided are estimates and may not fully reflect future market conditions due to unforeseen variables. Users are advised to conduct their own research and consult professionals before making financial or investment decisions based on the predictions. The developers are not responsible for any losses or damages incurred as a result of using this platform, and by accessing it, users acknowledge and accept these terms.
+                        </div>
                     </Box >
                 </form>
             </Box>
 
-            <Box className='light-background width-40p height-250 border-radius-15 margin-left-10 light-box-shadow'>
+            <Box className='light-background width-40p border-radius-15 margin-left-10 light-box-shadow' sx={{ height: '315px' }}>
                 <Typography variant='h6' className='text-align-center padding-top-10 font-16 bolder margin-top-10'>
                     Result
                 </Typography>
                 <Box className='padding-10 flex flex-direction-column align-items-center'>
                     {(year && month) ? (
                         <Typography className='font-13 margin-bottom-5'>
-                            <span className='font-12'> Predicted <b>{year} / {month}</b> : </span> {data.ensemble_prediction.toFixed(2)}
+                            <span className='font-12'> <b>{year} / {month}</b> : </span> {data.ensemble_prediction.toFixed(2)} <b> LKR</b>
                         </Typography>
                     ) : (
                         <Typography className='font-13 margin-bottom-5'>

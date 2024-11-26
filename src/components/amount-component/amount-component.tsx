@@ -22,7 +22,7 @@ const AmountComponent: React.FC<AmountComponentProps> = ({ onClick, date, setDat
 
     return (
         <div className='flex align-items-center justify-content-start font-12'>
-            <Box className='light-background width-60p height-250 border-radius-15 light-box-shadow'>
+            <Box className='light-background width-60p border-radius-15 light-box-shadow' sx={{ height: '315px' }}>
                 <Typography variant='h6' className='text-align-center padding-top-10 font-16 bolder margin-top-10'>
                     Quantity Prediction of Rubber Plantation
                 </Typography>
@@ -49,18 +49,23 @@ const AmountComponent: React.FC<AmountComponentProps> = ({ onClick, date, setDat
                             type='submit'
                             isLoading={isLoading}
                         />
+                        <div className='padding-top-30' style={{ width: '700px', textAlign: 'center' }} >
+                            <span className='italic underline bolder'>Disclaimer </span>
+                            -
+                            The Rubber Quantity Prediction platform is designed for informational purposes only. Using advanced machine learning models trained on historical data from 2000 to 2023, it provides estimates for rubber plantation quantities in metric tons (MT) per month. However, these predictions are based on historical trends and may not fully reflect future conditions due to unforeseen variables. Users are advised to conduct their own research and consult professionals before making operational decisions based on these predictions. The developers are not responsible for any losses or damages incurred as a result of using this platform, and by accessing it, users acknowledge and accept these terms.
+                        </div>
                     </Box >
                 </form>
             </Box>
 
-            <Box className='light-background width-40p height-250 border-radius-15 margin-left-10 light-box-shadow'>
+            <Box className='light-background width-40p border-radius-15 margin-left-10 light-box-shadow' sx={{ height: '315px' }}>
                 <Typography variant='h6' className='text-align-center padding-top-10 font-16 bolder margin-top-10'>
                     Result
                 </Typography>
                 <Box className='padding-10 flex flex-direction-column align-items-center'>
                     {(year && month) ? (
                         <Typography className='font-13 margin-bottom-5'>
-                            <span className='font-12'> Predicted <b>{year} / {month}</b> : </span> {data.Ensemble.toFixed(2)}
+                            <span className='font-12'>  <b>{year} / {month}</b> : </span> {data.Ensemble.toFixed(2)}<b> MT</b>
                         </Typography>
                     ) : (
                         <Typography className='font-13 margin-bottom-5'>

@@ -37,6 +37,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isAuthenticated }) => {
     const handleSelect = (item: { key: string, label: string, path: string, icon: JSX.Element }) => {
         initialService.dispatch(setRouteTitle(item.label));
         initialService.dispatch(setSelectedNav(item.key));
+        initialService.navigate(item.path);
     }
 
     return (

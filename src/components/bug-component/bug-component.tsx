@@ -74,7 +74,7 @@ const BugComponent: React.FC<BugComponentProps> = ({ onClick, isLoading, notific
                 </Typography>
                 <Box className='padding-10 flex flex-direction-column align-items-center'>
                     {(data) ? (
-                        <Typography className='font-13 margin-bottom-5'>
+                        <Typography className='font-13 margin-bottom-5 bolder'>
                             {data.class}
                         </Typography>
                     ) : (

@@ -28,7 +28,7 @@ const FungusComponent: React.FC<FungusComponentProps> = ({ onClick, isLoading, n
 
     return (
         <div className='flex align-items-center justify-content-start font-12'>
-            <Box className='light-background width-60p  height-450 border-radius-15 light-box-shadow'>
+            <Box className='light-background width-60p border-radius-15 light-box-shadow' sx={{ height: '523px' }}>
                 <Typography variant='h6' className='text-align-center padding-top-10 font-16 bolder margin-top-10'>
                     Disease Identification of Rubber Plantation
                 </Typography>
@@ -64,7 +64,7 @@ const FungusComponent: React.FC<FungusComponentProps> = ({ onClick, isLoading, n
                 </form>
             </Box>
 
-            <Box className='light-background width-40p height-250 border-radius-15 margin-left-10 light-box-shadow height-450'>
+            <Box className='light-background width-40p border-radius-15 margin-left-10 light-box-shadow' sx={{ height: '523px' }}>
                 <Typography variant='h6' className='text-align-center padding-top-10 font-16 bolder margin-top-10'>
                     Result
                 </Typography>

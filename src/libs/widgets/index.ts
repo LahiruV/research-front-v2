@@ -12,3 +12,4 @@ export { default as BasicChip } from './chip/chip';
 export { default as HorizontalBars } from './horizontal-bars/horizontal-bars';
 export { default as SimpleBarChart } from './simple-bar-chart/simple-bar-chart';
 export { default as SelectBasic } from './select-basic/select-basic';
+export { default as NavBar } from './nav-bar/nav-bar';

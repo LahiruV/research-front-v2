@@ -55,7 +55,7 @@ const RegisterComponent: React.FC<RegisterComponentProps> = ({
         setIsFileUploaded(true);
     }
     const login = () => {
-        initialService.navigate('/');
+        initialService.navigate('/login');
     }
 
     return (

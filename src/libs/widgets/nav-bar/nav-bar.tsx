@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
+import EnergySavingsLeafIcon from '@mui/icons-material/EnergySavingsLeaf';
 
 export interface NavBarProps {
 
@@ -15,21 +16,27 @@ export interface NavBarProps {
 const NavBar: React.FC<NavBarProps> = () => {
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
+            <AppBar
+                color='warning'
+            >
                 <Toolbar>
-                    <IconButton
-                        size="large"
-                        edge="start"
-                        color="inherit"
-                        aria-label="menu"
-                        sx={{ mr: 2 }}
-                    >
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        News
+                    <EnergySavingsLeafIcon sx={{
+                        mr: 2,
+                        color: "#424242"
+                    }} />
+                    <Typography className='bolder' variant="h6" component="div" sx={{ flexGrow: 1, }}>
+                        Zenra Plantation
                     </Typography>
-                    <Link to="/login"> <Button className='dark-card-font' color="inherit">Login</Button> </Link>
+                    <Link to="/login"> <Button
+                        variant="contained"
+                        className='dark-card-font' sx={{
+                            backgroundColor: '#212121',
+                            color: '#fff',
+                            '&:hover': {
+                                backgroundColor: '#424242',
+                                color: '#fff'
+                            }
+                        }} >Login</Button> </Link>
                 </Toolbar>
             </AppBar>
         </Box>

@@ -1,5 +1,5 @@
 
-import { Card, CardActionArea, CardContent, CardHeader, Typography } from '@mui/material';
+import { Card, CardActionArea, CardContent, Typography } from '@mui/material';
 import React from 'react';;
 
 export interface DetailComponentProps {

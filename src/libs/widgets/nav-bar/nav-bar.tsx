@@ -8,6 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 import EnergySavingsLeafIcon from '@mui/icons-material/EnergySavingsLeaf';
+import { company_name } from '@zenra/configs';
 
 export interface NavBarProps {
 
@@ -25,7 +26,7 @@ const NavBar: React.FC<NavBarProps> = () => {
                         color: "#424242"
                     }} />
                     <Typography className='bolder' variant="h6" component="div" sx={{ flexGrow: 1, }}>
-                        Zenra Plantation
+                        {company_name}
                     </Typography>
                     <Link to="/login"> <Button
                         variant="contained"

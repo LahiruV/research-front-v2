@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Box } from '@mui/material';
+import { company_name } from '@zenra/configs';
 
 const HomePage: React.FC = () => {
     const settings = {
@@ -16,10 +17,31 @@ const HomePage: React.FC = () => {
         autoplaySpeed: 3000,
     };
 
+    const welcomeStyle = {
+        paddingTop: '85px',
+        fontSize: '26px',
+        textAlign: 'center',
+        fontWeight: 'bold',
+        color: '#424242',
+        animation: 'fadeIn 1s ease-in-out',
+    } as React.CSSProperties;
+
+    const fadeInStyle = `@keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }`;
+
     return (
         <div>
             <NavBar />
-            <Box sx={{ width: '85%', margin: 'auto',paddingTop:'55px', mt: 4 }}>
+             <div style={welcomeStyle}>
+                Welcome To {company_name}
+            </div>
+            <Box sx={{ width: '85%', margin: 'auto', mt: 4 }}>
                 <Slider {...settings}>
                     <div>
                         <img src="https://plus.unsplash.com/premium_photo-1679428402040-e3c93439ec13?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 

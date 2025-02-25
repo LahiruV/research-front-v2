@@ -9,3 +9,5 @@ export { default as AmountComponent } from './amount-component/amount-component'
 export { default as PriceComponent } from './price-component/price-component';
 export { default as BugComponent } from './bug-component/bug-component';
 export { default as FungusComponent } from './fungus-component/fungus-component';
+export { default as DetailComponent } from './home-components/detail-component';
+

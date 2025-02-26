@@ -26,10 +26,11 @@ const DetailComponent: React.FC<DetailComponentProps> = ({title,description,imag
         <Card >
         <CardActionArea>
             <CardContent sx={{ height: 407 }}>
-                <Typography gutterBottom variant="h5" component="div" className='underline'>
+                <Typography gutterBottom  variant="h5" component="div" className='underline font-28'>
                     {title}
                 </Typography>
-                <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                <br/>
+                <Typography className='font-16' sx={{ color: 'text.secondary' }}>
                    {description}
                 </Typography>
             </CardContent>

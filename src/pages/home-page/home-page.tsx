@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Box, Grid, Grid2, Paper, styled } from '@mui/material';
 import { company_name } from '@zenra/configs';
-import { DetailComponent, TeamDetailComponent } from '@zenra/components';
+import { CountingStats, DetailComponent, TeamDetailComponent } from '@zenra/components';
 
 const HomePage: React.FC = () => {
     const settings = {
@@ -190,6 +190,7 @@ const HomePage: React.FC = () => {
                     </Grid>
                 </Box>
             </div>
+            <CountingStats/>
             <div className='margin-top-30'>
                 <div className='text-align-center font-24 bolder margin-bottom-20' style={{ color: '#424242', paddingTop: '25px', paddingBottom: '5px' }}>
                     Our Team

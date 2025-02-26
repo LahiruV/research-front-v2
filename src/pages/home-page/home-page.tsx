@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Box, Grid, Grid2, Paper, styled } from '@mui/material';
 import { company_name } from '@zenra/configs';
-import { CountingStats, DetailComponent, TeamDetailComponent } from '@zenra/components';
+import { CountingStats, DetailComponent, Footer, TeamDetailComponent } from '@zenra/components';
 
 const HomePage: React.FC = () => {
     const settings = {
@@ -69,16 +69,6 @@ const HomePage: React.FC = () => {
                     </div>
                 </Slider>
             </Box>
-
-            {/* <div className='flex margin-top-20'>
-                <DetailComponent />
-                <DetailComponent />
-            </div>
-            <div className='flex margin-top-20'>
-                <DetailComponent />
-                <DetailComponent />
-            </div> */}
-
             <div className='margin-top-30'>
                 <div className='text-align-center font-24 bolder margin-bottom-20' style={{ color: '#424242', paddingTop: '25px', paddingBottom: '5px' }}>
                     Our Theme
@@ -191,7 +181,7 @@ const HomePage: React.FC = () => {
                 </Box>
             </div>
             <CountingStats/>
-            <div className='margin-top-30'>
+            <div >
                 <div className='text-align-center font-24 bolder margin-bottom-20' style={{ color: '#424242', paddingTop: '25px', paddingBottom: '5px' }}>
                     Our Team
                     <hr style={{ width: '2%' }} />
@@ -248,6 +238,9 @@ const HomePage: React.FC = () => {
                         </Grid>
                     </Grid>
                 </Box>
+            </div>
+            <div className='padding-top-20'>
+            <Footer/>
             </div>
         </div>
     );

@@ -12,3 +12,4 @@ export { default as FungusComponent } from './fungus-component/fungus-component'
 export { default as DetailComponent } from './home-components/detail-component';
 export { default as TeamDetailComponent} from './home-components/team-detail-component'
 export { default as CountingStats} from './home-components/count-stats'
+export { default as Footer} from './main-components/footer-componenent/footer-componenent'

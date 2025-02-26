@@ -13,7 +13,7 @@ const TeamDetailComponent: React.FC<TeamDetailComponentProps> = ({name,descripti
     return (    
         <Card >
         <CardActionArea>
-            <CardContent sx={{ height: 407 }}>
+            <CardContent sx={{ height: 307 }}>
                 <div className='flex'>
                 <div style={{
                     paddingTop:'10px'

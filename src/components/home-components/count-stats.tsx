@@ -10,8 +10,8 @@ import CampaignIcon from "@mui/icons-material/Campaign";
 
 const stats = [
   { icon: <FavoriteIcon color="error" fontSize="large" />, value: 486, label: "Satisfied Clients by Results" },
-  { icon: <AccessTimeIcon color="primary" fontSize="large" />, value: 3000, label: "Hours of Cleaning Work" },
-  { icon: <DiamondIcon color="info" fontSize="large" />, value: 1090, label: "Perfectly Cleaned Premises" },
+  { icon: <AccessTimeIcon color="primary" fontSize="large" />, value: 3000, label: "Hours of Work" },
+  { icon: <DiamondIcon color="info" fontSize="large" />, value: 1090, label: "Perfectly Premises" },
   { icon: <EmojiEmotionsIcon color="warning" fontSize="large" />, value: 96, suffix: "%", label: "Client Satisfaction Rate" },
   { icon: <CampaignIcon color="secondary" fontSize="large" />, value: 230, label: "Referred Clients" },
 ];
@@ -22,7 +22,7 @@ const CountingStats: React.FC = () => {
   return (
     <Box sx={{ p: 4, backgroundColor: "#f8fbff", textAlign: "center" }} ref={ref}>
       <Typography variant="h5" fontWeight="bold" mb={3}>
-        Our Experience in Cleaning Business
+        Our Experience in Predictions
       </Typography>
       <Grid container spacing={3} justifyContent="center">
         {stats.map((stat, index) => (

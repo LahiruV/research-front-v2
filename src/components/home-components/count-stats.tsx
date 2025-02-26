@@ -20,9 +20,9 @@ const CountingStats: React.FC = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
 
   return (
-    <Box sx={{ p: 4, backgroundColor: "#f8fbff", textAlign: "center", paddingBottom:'60px' }} ref={ref}>
+    <Box sx={{ p: 4, backgroundColor: "#f8fbff", textAlign: "center", paddingBottom: '60px' }} ref={ref}>
       <Typography variant="h5" fontWeight="bold" mb={3}>
-        Our Experience in Predictions
+        Experience in Predictions
       </Typography>
       <Grid container spacing={3} justifyContent="center">
         {stats.map((stat, index) => (

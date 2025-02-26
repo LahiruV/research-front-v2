@@ -48,7 +48,7 @@ const HomePage: React.FC = () => {
     }));
 
     return (
-        <div>
+        <div style={{ backgroundColor: "#f8fbff"}}>
             <NavBar />
             <div style={welcomeStyle}>
                 Welcome To {company_name}

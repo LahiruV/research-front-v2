@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Grid, Typography, TextField, Button, Box } from "@mui/material";
 import { Facebook, Twitter, Instagram, YouTube } from "@mui/icons-material";
 import { company_name } from "@zenra/configs";
+import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   return (
@@ -55,9 +56,13 @@ const Footer: React.FC = () => {
                 placeholder="Your email address"
                 sx={{ bgcolor: "#fff", borderRadius: 1, flexGrow: 1 }}
               />
-              <Button variant="contained" color="error">
-                Login
-              </Button>
+               <Link to="/login"> <Button
+                        variant="contained"
+                        className='dark-card-font'
+                          color="error" >
+                            Login
+                            </Button>
+                             </Link>
             </Box>
 
             {/* Social Media Icons */}
@@ -74,7 +79,7 @@ const Footer: React.FC = () => {
         <Box textAlign="center" mt={4}>
           <Typography variant="body2">
             © 2025 Copyright - All rights reserved by{" "}
-            <span style={{ textDecoration: "underline", cursor: "pointer" }}>{company_name}</span>
+            <span style={{ textDecoration: "underline", cursor: "pointer", color: "#ed6c02" }}>{company_name}</span>
           </Typography>
         </Box>
       </Container>

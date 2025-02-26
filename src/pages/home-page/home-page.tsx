@@ -104,22 +104,86 @@ const HomePage: React.FC = () => {
                     <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                         <Grid item xs={6}>
                             <Item>
-                                <DetailComponent />
+                                <DetailComponent 
+                                title='Lizard' 
+                                description=' Lizards are a widespread group of squamate reptiles, with over 6,000
+                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
+                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
+                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
+                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
+                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000'
+                                />
                             </Item>
                         </Grid>
                         <Grid item xs={6}>
                             <Item>
-                                <DetailComponent />
+                                <DetailComponent
+                                isImage={true}
+                                image='https://cdn.britannica.com/21/75921-050-A34DC6E2/Latex-rubber-tree.jpg'
+                                />
+                            </Item>
+                        </Grid>
+                        <Grid item xs={6}>
+                        <Item>
+                                <DetailComponent
+                                isImage={true}
+                                image='https://media.istockphoto.com/id/187758565/photo/green-trees-with-narrow-trunk-in-rubber-plantation.jpg?s=612x612&w=0&k=20&c=w9i81O6DwrQ9Dc-Rny6rIK8xosd2uMzBrloQ5dJi6pc='
+                                />
+                            </Item>
+                        </Grid>
+                        <Grid item xs={6}>
+                        <Item>
+                                <DetailComponent 
+                                title='Lizard' 
+                                description=' Lizards are a widespread group of squamate reptiles, with over 6,000
+                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
+                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
+                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
+                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
+                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000'
+                                />
                             </Item>
                         </Grid>
                         <Grid item xs={6}>
                             <Item>
-                                <DetailComponent />
+                                <DetailComponent 
+                                title='Lizard' 
+                                description=' Lizards are a widespread group of squamate reptiles, with over 6,000
+                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
+                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
+                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
+                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
+                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000'
+                                />
                             </Item>
                         </Grid>
                         <Grid item xs={6}>
                             <Item>
-                                <DetailComponent />
+                                <DetailComponent
+                                isImage={true}
+                                image='https://plantura.garden/uk/wp-content/uploads/sites/2/2022/05/rubber-plant-pests-1024x683.jpg?x63657'
+                                />
+                            </Item>
+                        </Grid>
+                        <Grid item xs={6}>
+                        <Item>
+                                <DetailComponent
+                                isImage={true}
+                                image='https://upload.wikimedia.org/wikipedia/commons/c/cf/Dedaunan_%284%29.JPG'
+                                />
+                            </Item>
+                        </Grid>
+                        <Grid item xs={6}>
+                        <Item>
+                                <DetailComponent 
+                                title='Lizard' 
+                                description=' Lizards are a widespread group of squamate reptiles, with over 6,000
+                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
+                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
+                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
+                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
+                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000'
+                                />
                             </Item>
                         </Grid>
                     </Grid>

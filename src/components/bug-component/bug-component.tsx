@@ -82,43 +82,123 @@ const BugComponent: React.FC<BugComponentProps> = ({ onClick, isLoading, notific
                             <span className='font-12'>Fill the form to predict the amount</span>
                         </Typography>
                     )}
-                    {/* <Typography className='font-13 margin-bottom-5'>
-                        <hr />
-                        <Typography variant='h6' className='text-align-center font-16 bolder margin-top-5'>
-                            Solutions
+                    {(data.class === 'Mealy Bugs') && (
+                        <Typography className='font-13 margin-bottom-5'>
+                            <hr />
+                            <Typography variant='h6' className='text-align-center font-16 bolder margin-top-5'>
+                                Solutions
+                            </Typography>
+                            <hr />
+                            <div className='font-13'>
+                                They belong to the class Pseudococcidae of the order Hemiptera. They have
+                                sap-sucking mouth parts and their feeding habit is similar to that of the scale insects.
+                                However, unlike in the scales, the body of the female mealy bug is covered with a
+                                protective white waxy material. The males are tiny, fly-like active insects with two
+                                wings and are incapable of feeding at the adult stage. Young stages of the both sexes
+                                are flattened, oval, light yellow, six-legged.
+                            </div>
+                            <div className='font-13 bolder margin-top-10'>
+                                Nature of the damage
+                            </div>
+                            <div className='font-12'>
+                                Mealybugs are mainly found feeding at the axils of branching stems and
+                                leaves and on the upper and lower surfaces of leaves. When heavily infested,
+                                stunting of the plants, defoliation and die back of the infected parts will occur.
+                            </div>
+                            <div className='font-13 bolder margin-top-10'>
+                                Management strategies
+                            </div>
+                            <div className='font-12'>
+                                Mealybugs are not economically important under the field conditions as
+                                they are biologically controlled by natural enemies. To prevent mealybugs on a rubber plant, regularly inspect your
+                                plant for signs of infestation, quarantine new plants before introducing them to your
+                                collection, and use a preventative spray like diluted neem oil to repel mealybugs; if you
+                                do notice an infestation, promptly isolate the plant and treat it with insecticidal soap
+                                or horticultural oil.If the infestation is heavy and alarming, it is recommended to contact the rubber research institute of Sri Lanka for
+                                the management instructions.
+                            </div>
                         </Typography>
-                        <hr />
-                        <div className='font-13'>
-                            Cockchafer grubs are the larval stage of the beetles of the family
-                            Scarabaeidae. The grubs of number of species under this family are
-                            known to feed on rubber roots. They consist of white or creamy fleshy grubs with
-                            incurved bodies of different sizes. The head is distinct and hard, chitinous, brown
-                            and they are equipped with a powerful pair of jaws and biting-type mouth parts.
-                        </div>
-                        <div className='font-13 bolder margin-top-10'>
-                            Nature of the damage
-                        </div>
-                        <div className='font-12'>
-                            Eggs are laid in soil and grubs hatch out in 2-3 weeks and feed on organic
-                            matter, and gradually begin to attack roots of the young plants. The lateral roots
-                            may be eaten off and similarly the cortex of the taproot may also be eaten away.
-                            With the root destruction, above-ground symptoms may appear as yellowing of
-                            leaves and dieback of shoots. In the case of severe attack, young trees may die.
-                        </div>
-                        <div className='font-13 bolder margin-top-10'>
-                            Management strategies
-                        </div>
-                        <div className='font-12'>
-                            Like in other pests, cockchafers also have many natural enemies who
-                            generally keep their population down. However, the plantation should be cleaned of
-                            decaying woody debris to eliminate breeding grounds for beetles. Application of the
-                            insecticide Imidocloprid to the surrounding soils of the infested plants gives a
-                            satisfactory control. Each infested plant has to be treated with 2.5 ml of
-                            Imidocloprid diluted in 1.5 l of water. The insecticide has to be poured in to 4 holes
-                            dug 10 cm deep in a circle of a six inches to one foot-radius.
-                        </div>
-
-                    </Typography> */}
+                    )}
+                    {(data.class === 'Cockchafer Grubs') && (
+                        <Typography className='font-13 margin-bottom-5'>
+                            <hr />
+                            <Typography variant='h6' className='text-align-center font-16 bolder margin-top-5'>
+                                Solutions
+                            </Typography>
+                            <hr />
+                            <div className='font-13'>
+                                Cockchafer grubs are the larval stage of the beetles of the family
+                                Scarabaeidae. The grubs of number of species under this family are
+                                known to feed on rubber roots. They consist of white or creamy fleshy grubs with
+                                incurved bodies of different sizes. The head is distinct and hard, chitinous, brown
+                                and they are equipped with a powerful pair of jaws and biting-type mouth parts.
+                            </div>
+                            <div className='font-13 bolder margin-top-10'>
+                                Nature of the damage
+                            </div>
+                            <div className='font-12'>
+                                Eggs are laid in soil and grubs hatch out in 2-3 weeks and feed on organic
+                                matter, and gradually begin to attack roots of the young plants. The lateral roots
+                                may be eaten off and similarly the cortex of the taproot may also be eaten away.
+                                With the root destruction, above-ground symptoms may appear as yellowing of
+                                leaves and dieback of shoots. In the case of severe attack, young trees may die.
+                            </div>
+                            <div className='font-13 bolder margin-top-10'>
+                                Management strategies
+                            </div>
+                            <div className='font-12'>
+                                Like in other pests, cockchafers also have many natural enemies who
+                                generally keep their population down. However, the plantation should be cleaned of
+                                decaying woody debris to eliminate breeding grounds for beetles. Application of the
+                                insecticide Imidocloprid to the surrounding soils of the infested plants gives a
+                                satisfactory control. Each infested plant has to be treated with 2.5 ml of
+                                Imidocloprid diluted in 1.5 l of water. The insecticide has to be poured in to 4 holes
+                                dug 10 cm deep in a circle of a six inches to one foot-radius.
+                            </div>
+                        </Typography>
+                    )}
+                    {(data.class === 'Scale Insects') && (
+                        <Typography className='font-13 margin-bottom-5'>
+                            <hr />
+                            <Typography variant='h6' className='text-align-center font-16 bolder margin-top-5'>
+                                Solutions
+                            </Typography>
+                            <hr />
+                            <div className='font-13'>
+                                They belong to the class Coccidae of the order Hemiptera. The females are
+                                flattened, elongated-oval shaped, purple black, convex and sedentary, covered with
+                                a protective hard smooth exoskeleton, hence referred to as scale insects. The adult males are delicate and possess mouth parts and are harmless to the plants.
+                            </div>
+                            <div className='font-13 bolder margin-top-10'>
+                                Nature of the damage
+                            </div>
+                            <div className='font-12'>
+                                Their feeding mechanism is to insert specialized tube-like mouth parts into
+                                plant tissues and suck the sap. The adult females and the pupal stages of both sexes
+                                are well adapted for this type of feeding. As a result of their feeding on the green
+                                shoots, petioles and underside of the leaves along the mid-rib and veins, plants get
+                                weakened. Similarly, the apical bud may also be destroyed in a heavy attack.
+                                Young seedling plants in nurseries are highly susceptible to the scale insects. Under
+                                favourable weather conditions, the seedlings may be completely killed. In addition
+                                to the direct damage, it results in reduction of the photosynthesis due to sooty
+                                moulds development on their sugary excreta.
+                            </div>
+                            <div className='font-13 bolder margin-top-10'>
+                                Management strategies
+                            </div>
+                            <div className='font-12'>
+                                Normally, scale insects are biologically controlled by natural enemies such as predatory
+                                insects and parasitic fungi in the field conditions. However, the natural balance could be
+                                destroyed in situations such as in large-scale nurseries which are a favourable habitat for
+                                them. To prevent scale insects on a rubber plant use horticultural oils. Regularly inspect
+                                Rubber tree for early signs of scale insects to manage infestations before they spread.
+                                Look for pests before bringing new plants inside.   Limit nitrogen-rich fertilizers, which
+                                encourage lush growth, making plants more attractive to scale insects.In a heavy infestation,
+                                it is recommended to contact the rubber research institute of Sri Lanka for the management
+                                instructions.
+                            </div>
+                        </Typography>
+                    )}
                 </Box>
             </Box>
             <NotificationWidget

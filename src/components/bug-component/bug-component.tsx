@@ -82,6 +82,43 @@ const BugComponent: React.FC<BugComponentProps> = ({ onClick, isLoading, notific
                             <span className='font-12'>Fill the form to predict the amount</span>
                         </Typography>
                     )}
+                    {/* <Typography className='font-13 margin-bottom-5'>
+                        <hr />
+                        <Typography variant='h6' className='text-align-center font-16 bolder margin-top-5'>
+                            Solutions
+                        </Typography>
+                        <hr />
+                        <div className='font-13'>
+                            Cockchafer grubs are the larval stage of the beetles of the family
+                            Scarabaeidae. The grubs of number of species under this family are
+                            known to feed on rubber roots. They consist of white or creamy fleshy grubs with
+                            incurved bodies of different sizes. The head is distinct and hard, chitinous, brown
+                            and they are equipped with a powerful pair of jaws and biting-type mouth parts.
+                        </div>
+                        <div className='font-13 bolder margin-top-10'>
+                            Nature of the damage
+                        </div>
+                        <div className='font-12'>
+                            Eggs are laid in soil and grubs hatch out in 2-3 weeks and feed on organic
+                            matter, and gradually begin to attack roots of the young plants. The lateral roots
+                            may be eaten off and similarly the cortex of the taproot may also be eaten away.
+                            With the root destruction, above-ground symptoms may appear as yellowing of
+                            leaves and dieback of shoots. In the case of severe attack, young trees may die.
+                        </div>
+                        <div className='font-13 bolder margin-top-10'>
+                            Management strategies
+                        </div>
+                        <div className='font-12'>
+                            Like in other pests, cockchafers also have many natural enemies who
+                            generally keep their population down. However, the plantation should be cleaned of
+                            decaying woody debris to eliminate breeding grounds for beetles. Application of the
+                            insecticide Imidocloprid to the surrounding soils of the infested plants gives a
+                            satisfactory control. Each infested plant has to be treated with 2.5 ml of
+                            Imidocloprid diluted in 1.5 l of water. The insecticide has to be poured in to 4 holes
+                            dug 10 cm deep in a circle of a six inches to one foot-radius.
+                        </div>
+
+                    </Typography> */}
                 </Box>
             </Box>
             <NotificationWidget

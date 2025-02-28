@@ -138,13 +138,8 @@ const HomePage: React.FC = () => {
                         <Grid item xs={6}>
                             <Item>
                                 <DetailComponent
-                                    title='Lizard'
-                                    description=' Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000'
+                                    title='Pest Identification of Rubber Plantation'
+                                    description='Welcome to Smart Pest Detection for Rubber Plantations, an AI-powered system designed to identify pests, assess damage, and provide effective solutions for healthier rubber crops. Using Convolutional Neural Networks (CNNs), our technology analyzes plant images to detect pests like mealybugs Scale insects helping farmers take timely action. Our key objectives include identification of Pest damage (IPD), accurately classifying common pests, and providing solutions for Damage (PSD)—offering targeted treatments such as chemical, biological, and cultural control methods. With a focus on efficiency, sustainability, and improved crop productivity, our system ensures smarter pest management for a thriving rubber plantation.'
                                 />
                             </Item>
                         </Grid>

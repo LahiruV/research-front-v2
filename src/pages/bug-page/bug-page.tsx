@@ -3,7 +3,7 @@ import { BugMutateFunc } from '@zenra/api';
 import { BugComponent } from '@zenra/components';
 import { handleNotifyError } from '@zenra/functions';
 import { BugResponse } from '@zenra/model';
-import { removeBackground, useInitialService } from '@zenra/services';
+import { useInitialService } from '@zenra/services';
 import { RootState, setBug } from '@zenra/store';
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';

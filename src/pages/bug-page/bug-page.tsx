@@ -23,9 +23,9 @@ const Bug: React.FC = () => {
         e.preventDefault();
         setIsLoading(true);
         try {
-            const processedFile = await removeBackground(file);
+            // const processedFile = await removeBackground(file);
             const formData = new FormData();
-            formData.append('file', processedFile);
+            formData.append('file', file);
             bugMutate(formData, {
                 onSuccess: (response: BugResponse) => {
                     setIsLoading(false);

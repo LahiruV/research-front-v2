@@ -96,13 +96,8 @@ const HomePage: React.FC = () => {
                         <Grid item xs={6}>
                             <Item>
                                 <DetailComponent
-                                    title='Lizard'
-                                    description=' Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000'
+                                    title='Rubber Milk Prediction'
+                                    description=''
                                 />
                             </Item>
                         </Grid>
@@ -185,13 +180,8 @@ const HomePage: React.FC = () => {
                     <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                         <Grid item xs={6}>
                             <Item>
-                                <TeamDetailComponent name='Lahiru'
-                                    description=' Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000'
+                                <TeamDetailComponent name='Buddima Thathsara Sankalpa'
+                                    description='I am Buddima Thathsara Sankalpa, a 23-year-old SLIIT undergraduate pursuing cloud engineering. I am passionate about cloud computing and IT infrastructure and am excited about enhancing my technical expertise in areas like cloud deployment, security, and automation.I am gaining hands-on experience via a Cloud Engineering Internship, in which I am engaged in network configuration, domain establishment, and management of cloud-based solutions. The internship has provided me with good real-world exposure to cloud operations, which has improved my problem-solving skills and technical knowledge.'
                                     image='https://cdn.britannica.com/21/75921-050-A34DC6E2/Latex-rubber-tree.jpg' />
                             </Item>
                         </Grid>

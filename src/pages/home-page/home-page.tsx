@@ -96,8 +96,10 @@ const HomePage: React.FC = () => {
                         <Grid item xs={6}>
                             <Item>
                                 <DetailComponent
-                                    title='Rubber Milk Prediction'
-                                    description=''
+                                    title='Rubber Milk Volume Prediction'
+                                    description='
+                                    Volume of rubber milk prediction is essential for the optimal latex yield and plantation management optimization. Three machine learning models GradientBoostingRegressor, RandomForestRegressor, and LinearRegression are employed within this project to research several variables that affect latex production.  GradientBoostingRegressor is an ensemble learning technique that improves prediction through the process of averaging numerous weak learners. RandomForestRegressor is strong in the sense that it averages numerous decision trees, which makes it resilient to handling nonlinear relationships in data. LinearRegression is a baseline model that provides a simple and interpretable means through which one can discern the environmental and tree specific variable relationship. 
+                                    '
                                 />
                             </Item>
                         </Grid>
@@ -120,13 +122,12 @@ const HomePage: React.FC = () => {
                         <Grid item xs={6}>
                             <Item>
                                 <DetailComponent
-                                    title='Lizard'
-                                    description=' Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000'
+                                    title='Predicting Rubber Milk Prices'
+                                    description='
+                                    Predicting rubber milk (natural rubber latex) prices in Sri Lanka is crucial for farmers and traders to make informed decisions. Machine learning models such as Gradient Boosting Regressor, Random Forest Regressor, and Linear Regression can be used to analyze historical price trends and market factors.
+                                    Gradient Boosting Regressor is an ensemble method that improves accuracy by combining multiple weak models, making it effective for capturing complex price patterns. Random Forest Regressor, another ensemble method, reduces overfitting by averaging multiple decision trees, ensuring stability in predictions. Meanwhile, Linear Regression, a simpler model, identifies direct relationships between price and influencing factors like demand, weather, and global rubber prices.
+                                    By leveraging these models, stakeholders can predict price fluctuations with higher accuracy, allowing them to optimize production and sales strategies. Integrating these techniques with realtime data and economic indicators can further enhance the reliability of rubber milk price forecasts in Sri Lanka.
+                                    '
                                 />
                             </Item>
                         </Grid>
@@ -134,7 +135,7 @@ const HomePage: React.FC = () => {
                             <Item>
                                 <DetailComponent
                                     title='Pest Identification of Rubber Plantation'
-                                    description='Welcome to Smart Pest Detection for Rubber Plantations, an AI-powered system designed to identify pests, assess damage, and provide effective solutions for healthier rubber crops. Using Convolutional Neural Networks (CNNs), our technology analyzes plant images to detect pests like mealybugs Scale insects helping farmers take timely action. Our key objectives include identification of Pest damage (IPD), accurately classifying common pests, and providing solutions for Damage (PSD)—offering targeted treatments such as chemical, biological, and cultural control methods. With a focus on efficiency, sustainability, and improved crop productivity, our system ensures smarter pest management for a thriving rubber plantation.'
+                                    description='Welcome to Smart Pest Detection for Rubber Plantations, an AI-powered system designed to identify pests, assess damage, and provide effective solutions for healthier rubber crops. Using Convolutional Neural Networks (CNNs), our technology analyzes plant images to detect pests like mealybugs Scale insects helping farmers take timely action. Our key objectives include identification of Pest damage (IPD), accurately classifying common pests, and providing solutions for Damage (PSD) offering targeted treatments such as chemical, biological, and cultural control methods. With a focus on efficiency, sustainability, and improved crop productivity, our system ensures smarter pest management for a thriving rubber plantation.'
                                 />
                             </Item>
                         </Grid>
@@ -182,7 +183,7 @@ const HomePage: React.FC = () => {
                             <Item>
                                 <TeamDetailComponent name='Buddima Thathsara Sankalpa'
                                     description='I am Buddima Thathsara Sankalpa, a 23-year-old SLIIT undergraduate pursuing cloud engineering. I am passionate about cloud computing and IT infrastructure and am excited about enhancing my technical expertise in areas like cloud deployment, security, and automation.I am gaining hands-on experience via a Cloud Engineering Internship, in which I am engaged in network configuration, domain establishment, and management of cloud-based solutions. The internship has provided me with good real-world exposure to cloud operations, which has improved my problem-solving skills and technical knowledge.'
-                                    image='https://cdn.britannica.com/21/75921-050-A34DC6E2/Latex-rubber-tree.jpg' />
+                                    image='../../../public/photos/buddima.jpeg' />
                             </Item>
                         </Grid>
                         <Grid item xs={6}>
@@ -194,7 +195,7 @@ const HomePage: React.FC = () => {
                                 species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
                                 species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
                                 species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000'
-                                    image='https://cdn.britannica.com/21/75921-050-A34DC6E2/Latex-rubber-tree.jpg' />
+                                    image='../../../public/photos/ishara.jpeg' />
                             </Item>
                         </Grid>
                         <Grid item xs={6}>

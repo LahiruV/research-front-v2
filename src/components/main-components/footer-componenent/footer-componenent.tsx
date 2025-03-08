@@ -18,8 +18,8 @@ const Footer: React.FC = () => {
             <Typography variant="body2">City: Malambe</Typography>
             <Typography variant="body2">State Full: Western Province</Typography>
             <Typography variant="body2">Zip Code: 21201</Typography>
-            <Typography variant="body2">Phone: 443-498-7166</Typography>
-            <Typography variant="body2">Mobile: 443-934-9384</Typography>
+            <Typography variant="body2">Phone: 011-498-7166</Typography>
+            <Typography variant="body2">Mobile: 011-934-9384</Typography>
           </Grid>
 
           {/* Menu Section */}
@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
           {/* Newsletter Section */}
           <Grid item xs={12} sm={6} md={3}>
             <Typography variant="h6" fontWeight="bold" gutterBottom>
-            {company_name}
+              {company_name}
             </Typography>
             <Box sx={{ display: "flex", gap: 1, mb: 2 }}>
               <TextField
@@ -56,13 +56,13 @@ const Footer: React.FC = () => {
                 placeholder="Your email address"
                 sx={{ bgcolor: "#fff", borderRadius: 1, flexGrow: 1 }}
               />
-               <Link to="/login"> <Button
-                        variant="contained"
-                        className='dark-card-font'
-                          color="error" >
-                            Login
-                            </Button>
-                             </Link>
+              <Link to="/login"> <Button
+                variant="contained"
+                className='dark-card-font'
+                color="error" >
+                Login
+              </Button>
+              </Link>
             </Box>
 
             {/* Social Media Icons */}

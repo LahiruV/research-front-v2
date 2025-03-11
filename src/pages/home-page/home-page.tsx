@@ -200,14 +200,9 @@ const HomePage: React.FC = () => {
                         </Grid>
                         <Grid item xs={6}>
                             <Item>
-                                <TeamDetailComponent name='Lizard'
-                                    description=' Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000'
-                                    image='https://cdn.britannica.com/21/75921-050-A34DC6E2/Latex-rubber-tree.jpg' />
+                                <TeamDetailComponent name='Umeshi Dulakshika'
+                                    description='I am Umeshi Dulakshika, an Associate QA Engineer and an undergraduate at SLIIT, specializing in Information Technology. Passionate about software quality assurance, UI/UX design, and software testing, I have hands-on experience in manual and automation testing. My research focuses on improving software quality and user experience through innovative testing methodologies. I am dedicated to continuous learning, problem-solving, and leveraging technology to enhance software reliability and user satisfaction.'
+                                    image='../../../public/photos/umesha.jpeg' />
                             </Item>
                         </Grid>
                         <Grid item xs={6}>

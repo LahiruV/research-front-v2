@@ -19,17 +19,23 @@ const Price: React.FC = () => {
     const [isSuccessful, setIsSuccessful] = useState(false);
     const [year, setYear] = useState<number>(0);
     const [month, setMonth] = useState<number>(0);
+    const [yearValidation, setYearValidation] = useState(false);
 
     const onClick = (e: React.FormEvent) => {
         e.preventDefault();
         const [year, month] = (typeof date === 'string' ? date : '').split('-').map(Number);
         setYear(year);
         setMonth(month);
+        if (year > 2026) {
+            setYearValidation(true);
+            return;
+        }
         if (!year || !month) {
             console.error('Invalid date format');
             setIsLoading(false);
             return;
         }
+        setYearValidation(false);
         setIsLoading(true);
         const payload: PricePayload = {
             Year: year,
@@ -67,6 +73,7 @@ const Price: React.FC = () => {
             data={price}
             year={year}
             month={month}
+            yearValidation={yearValidation}
             setOpen={() => setOpen(!open)}
         />
     );

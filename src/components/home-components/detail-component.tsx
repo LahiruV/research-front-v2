@@ -29,7 +29,7 @@ const DetailComponent: React.FC<DetailComponentProps> = ({ title, description, i
                                 {title}
                             </Typography>
                             <br />
-                            <Typography className='font-16' sx={{ color: 'text.secondary' }}>
+                            <Typography className='font-16' sx={{ color: 'text.secondary', textAlign: 'justify' }}>
                                 {description}
                             </Typography>
                         </CardContent>

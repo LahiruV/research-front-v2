@@ -188,13 +188,10 @@ const HomePage: React.FC = () => {
                         </Grid>
                         <Grid item xs={6}>
                             <Item>
-                                <TeamDetailComponent name='Lizard'
-                                    description=' Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000'
+                                <TeamDetailComponent name='Ishara Ranaweera'
+                                    description='
+                                    I amm Ishara Ranaweera , an Associate QA engineer and an udergraduate at SLIIT, specializing in information Technology  . With a strong passion for software quality assurance , I dedicated to ensuring the realibility and efficiency of software application .I keen attention to detail and analytical skills help identify and resolve issues, contributing to high-quality software soluttion .As a continuous learner, I stay updated with the latest QA methodology and industry trends  I committed to enhancing in software testing , automation, and development processes, steiving to deliver excellence in the IT field.
+                                    '
                                     image='../../../public/photos/ishara.jpeg' />
                             </Item>
                         </Grid>
@@ -207,13 +204,10 @@ const HomePage: React.FC = () => {
                         </Grid>
                         <Grid item xs={6}>
                             <Item>
-                                <TeamDetailComponent name='Lizard'
-                                    description=' Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000'
+                                <TeamDetailComponent name='Malitha Miron'
+                                    description='
+                                    I’m Malitha Miron, an Associate QA Engineer and an IT undergraduate at SLIIT. Passionate about software quality assurance, UI/UX design, and testing, I have hands-on experience in both manual and automation testing. My research explores innovative testing methodologies to enhance software quality and user experience. Committed to continuous learning and problem-solving, I strive to leverage technology to improve software reliability and user satisfaction, ensuring high-quality digital experiences.
+                                    '
                                     image='https://cdn.britannica.com/21/75921-050-A34DC6E2/Latex-rubber-tree.jpg' />
                             </Item>
                         </Grid>

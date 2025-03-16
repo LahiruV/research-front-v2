@@ -79,7 +79,7 @@ const BugComponent: React.FC<BugComponentProps> = ({ onClick, isLoading, notific
                         </Typography>
                     ) : (
                         <Typography className='font-13 margin-bottom-5'>
-                            <span className='font-12'>Fill the form to predict the amount</span>
+                            <span className='font-12'>Fill the form to predict the bug</span>
                         </Typography>
                     )}
                     {(data.class === 'Mealy Bugs') && (

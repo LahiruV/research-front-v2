@@ -40,7 +40,7 @@ const AmountComponent: React.FC<AmountComponentProps> = ({ onClick, date, setDat
                             size='sm'
                             value={date}
                             setState={setDate} />
-                        {yearValidation && <span className='font-12 red-main'>Year should be less than 2026</span>}
+                        {yearValidation && <span className='font-12 red-main'>Year should be less than 2025</span>}
                         <BasicButton
                             className='width-120 height-5 font-12 margin-top-10'
                             id='submit'

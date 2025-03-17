@@ -26,7 +26,7 @@ const Amount: React.FC = () => {
         const [year, month] = (typeof date === 'string' ? date : '').split('-').map(Number);
         setYear(year);
         setMonth(month);
-        if (year > 2026) {
+        if (year > 2025) {
             setYearValidation(true);
             return;
         }

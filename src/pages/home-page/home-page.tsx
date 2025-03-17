@@ -75,12 +75,7 @@ const HomePage: React.FC = () => {
                     <hr style={{ width: '2%' }} />
                     <div className='font-14' style={{ fontWeight: 'normal' }}>
                         <Box sx={{ width: '100%' }}>
-                            Lizards are a widespread group of squamate reptiles, with over 6,000
-                            species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                            species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                            species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                            species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                            species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
+                            The project aims to revolutionize rubber plantation management by integrating machine learning,  and AI to enhance yield prediction, price forecasting, disease detection, and pest control. This will empower rubber farmers, plantation managers, and the industry with data-driven insights for sustainable and profitable farming.
                         </Box>
                     </div>
                 </div>

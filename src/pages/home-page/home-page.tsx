@@ -158,13 +158,8 @@ const HomePage: React.FC = () => {
                         <Grid item xs={6}>
                             <Item>
                                 <DetailComponent
-                                    title='Lizard'
-                                    description=' Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  Lizards are a widespread group of squamate reptiles, with over 6,000'
+                                    title='Disease Identification of Rubber Plantation'
+                                    description='The Disease Identification of Rubber Plantation project focuses on detecting and classifying diseases affecting rubber trees using deep learning techniques. By leveraging computer vision and convolutional neural networks (CNNs), the system analyzes leaf images to identify diseases such as Bird’s Eye Spot and Corynespora. The dataset is preprocessed with augmentation techniques to enhance model robustness. A MobileNetV2-based CNN is trained to recognize disease patterns, ensuring accurate diagnosis. Performance evaluation includes accuracy tracking, confusion matrices, and classification reports. This research aims to support rubber plantation health management by providing an automated and efficient disease detection solution.'
                                 />
                             </Item>
                         </Grid>
@@ -208,7 +203,7 @@ const HomePage: React.FC = () => {
                                     description='
                                     I’m Malitha Miron, an Associate QA Engineer and an IT undergraduate at SLIIT. Passionate about software quality assurance, UI/UX design, and testing, I have hands-on experience in both manual and automation testing. My research explores innovative testing methodologies to enhance software quality and user experience. Committed to continuous learning and problem-solving, I strive to leverage technology to improve software reliability and user satisfaction, ensuring high-quality digital experiences.
                                     '
-                                    image='https://cdn.britannica.com/21/75921-050-A34DC6E2/Latex-rubber-tree.jpg' />
+                                    image='../../../public/photos/Malitha.jpeg' />
                             </Item>
                         </Grid>
                     </Grid>
